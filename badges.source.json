@@ -1,0 +1,2036 @@
+{
+ "name": "Neon TV",
+ "credit": "Patterns and colours derived from FR-Badges by farizmohd70 (MIT)",
+ "groups": [
+  {
+   "id": "hero",
+   "name": "Hero Badges"
+  },
+  {
+   "id": "editions",
+   "name": "Editions & Cuts"
+  },
+  {
+   "id": "source",
+   "name": "Release Source"
+  },
+  {
+   "id": "resolution",
+   "name": "Resolution"
+  },
+  {
+   "id": "dynamic-range",
+   "name": "Dynamic Range & Color"
+  },
+  {
+   "id": "video-format",
+   "name": "3D & Broadcast"
+  },
+  {
+   "id": "audio-codec",
+   "name": "Audio Codecs"
+  },
+  {
+   "id": "video-codec",
+   "name": "Video Codecs"
+  },
+  {
+   "id": "containers",
+   "name": "Containers"
+  },
+  {
+   "id": "audio-channels",
+   "name": "Audio Channels"
+  },
+  {
+   "id": "streaming",
+   "name": "Streaming Platforms"
+  },
+  {
+   "id": "debrid",
+   "name": "Debrid & Caching"
+  },
+  {
+   "id": "languages",
+   "name": "Languages"
+  },
+  {
+   "id": "audio-subs",
+   "name": "Audio & Subs Flags"
+  },
+  {
+   "id": "subtitles",
+   "name": "Subtitles"
+  }
+ ],
+ "badges": [
+  {
+   "id": "hero-remux",
+   "group": "hero",
+   "label": "REMUX",
+   "accent": "#8a86f5",
+   "enabled": false,
+   "pattern": "(?i)\\bremux\\b"
+  },
+  {
+   "id": "hero-4k",
+   "group": "hero",
+   "label": "4K",
+   "accent": "#f5a519",
+   "enabled": false,
+   "pattern": "(?i)\\b(4k|2160p|uhd|ultra[\\s._-]*hd)\\b"
+  },
+  {
+   "id": "hero-dolby-vision",
+   "group": "hero",
+   "label": "DOLBY VISION",
+   "accent": "#b86ff7",
+   "enabled": false,
+   "pattern": "(?is)^(?!.*(?:\\bhdr|\\b(dv[\\s._-]?p7|dovi[\\s._-]?p7|profile[\\s._-]?7)\\b|\\b(dv[\\s._-]?p8|dovi[\\s._-]?p8|profile[\\s._-]?8)\\b)).*?\\b(dolby[\\s._-]*vision|dovi|dv)\\b"
+  },
+  {
+   "id": "hero-dolby-atmos",
+   "group": "hero",
+   "label": "DOLBY ATMOS",
+   "accent": "#6880f3",
+   "enabled": false,
+   "pattern": "(?i)\\b(atmos|dolby[\\s._-]*atmos)\\b"
+  },
+  {
+   "id": "hero-cached",
+   "group": "hero",
+   "label": "CACHED",
+   "accent": "#f7b637",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\b(rd|realdebrid|real[\\s._-]*debrid)\\b|(?:\\[ad\\b[^\\]]*\\]|(?<![a-z0-9])ad\\+|\\ball[\\s._-]*debrid\\b)|(?:\\[pm\\b[^\\]]*\\]|(?<![a-z0-9])pm\\+|\\bpremiumize\\b)|(?:\\[tb\\b[^\\]]*\\]|(?<![a-z0-9])tb\\+|\\btorbox\\b)|(?:\\[dl\\b[^\\]]*\\]|(?<![a-z0-9])dl\\+|\\bdebrid[\\s._-]*link|debridlink\\b))).*?\\b(cached|instant|debrid)\\b"
+  },
+  {
+   "id": "edition-imax-enhanced",
+   "group": "editions",
+   "label": "IMAX ENHANCED",
+   "accent": "#3e8af6",
+   "enabled": true,
+   "pattern": "(?i)\\b(imax[\\s._-]*enhanced)\\b"
+  },
+  {
+   "id": "edition-imax",
+   "group": "editions",
+   "label": "IMAX",
+   "accent": "#4c95f2",
+   "enabled": true,
+   "pattern": "(?i)\\bimax\\b(?!\\s*enhanced)"
+  },
+  {
+   "id": "edition-open-matte",
+   "group": "editions",
+   "label": "OPEN MATTE",
+   "accent": "#1e819b",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])open[\\s._-]*matte(?![a-z0-9])"
+  },
+  {
+   "id": "edition-criterion",
+   "group": "editions",
+   "label": "CRITERION",
+   "accent": "#758191",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:criterion[\\s._-]*channel)).*?\\bcriterion\\b"
+  },
+  {
+   "id": "edition-directors-cut",
+   "group": "editions",
+   "label": "DIRECTOR'S CUT",
+   "accent": "#f4c645",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])directors?[\\s._-]*cut(?![a-z0-9])"
+  },
+  {
+   "id": "edition-extended",
+   "group": "editions",
+   "label": "EXTENDED",
+   "accent": "#339e5b",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])extended[\\s._-]*(?:cut|edition)(?![a-z0-9])"
+  },
+  {
+   "id": "edition-theatrical",
+   "group": "editions",
+   "label": "THEATRICAL",
+   "accent": "#e13a3a",
+   "enabled": true,
+   "pattern": "(?i)\\b(theatrical[\\s._-]*(cut|edition)?|thtr)\\b"
+  },
+  {
+   "id": "edition-final-cut",
+   "group": "editions",
+   "label": "FINAL CUT",
+   "accent": "#7b3fde",
+   "enabled": true,
+   "pattern": "(?i)\\bfinal[\\s._-]*cut\\b"
+  },
+  {
+   "id": "edition-special",
+   "group": "editions",
+   "label": "SPECIAL EDITION",
+   "accent": "#dc8213",
+   "enabled": true,
+   "pattern": "(?i)\\bspecial[\\s._-]*edition\\b"
+  },
+  {
+   "id": "edition-unrated",
+   "group": "editions",
+   "label": "UNRATED",
+   "accent": "#d66a2e",
+   "enabled": true,
+   "pattern": "(?i)\\b(unrated|uncut)\\b"
+  },
+  {
+   "id": "edition-hybrid",
+   "group": "editions",
+   "label": "HYBRID",
+   "accent": "#42a59a",
+   "enabled": true,
+   "pattern": "(?i)\\bhybrid\\b"
+  },
+  {
+   "id": "edition-remastered",
+   "group": "editions",
+   "label": "REMASTERED",
+   "accent": "#cf56df",
+   "enabled": true,
+   "pattern": "(?i)\\bremaster(ed)?\\b"
+  },
+  {
+   "id": "edition-proper",
+   "group": "editions",
+   "label": "PROPER",
+   "accent": "#2bad5b",
+   "enabled": true,
+   "pattern": "(?i)\\b(proper|repack)\\b"
+  },
+  {
+   "id": "edition-seadex",
+   "group": "editions",
+   "label": "SEADEX",
+   "accent": "#f7bb3e",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])(?:seadex|best[\\s._-]?release|alt[\\s._-]?(?:best[\\s._-]?)?release)(?![a-z0-9])|ᴀʟᴛ[\\s._-]?ʙᴇsᴛ[\\s._-]?ʀᴇʟᴇᴀsᴇ|ᴀʟᴛ[\\s._-]?ʀᴇʟᴇᴀsᴇ|ʙᴇsᴛ[\\s._-]?ʀᴇʟᴇᴀsᴇ"
+  },
+  {
+   "id": "source-remux",
+   "group": "source",
+   "label": "REMUX",
+   "accent": "#8a86f5",
+   "enabled": true,
+   "pattern": "(?i)\\bremux\\b"
+  },
+  {
+   "id": "source-uhd-bluray",
+   "group": "source",
+   "label": "UHD BLU-RAY",
+   "accent": "#235dda",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*\\bremux\\b)(?:(?!(?:\\bweb-?dl\\b|\\bweb-?rip\\b|\\bhdtv\\b|\\b(dvd|dvdrip)\\b|\\btvrip\\b)).)*?\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b"
+  },
+  {
+   "id": "source-bluray",
+   "group": "source",
+   "label": "BLU-RAY",
+   "accent": "#4c94f2",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\bremux\\b|\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b))(?:(?!(?:\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b|\\bweb-?dl\\b|\\bweb-?rip\\b|\\bhdtv\\b|\\b(dvd|dvdrip)\\b|\\btvrip\\b)).)*?\\b(blu-?ray|bdrip|brrip)\\b"
+  },
+  {
+   "id": "source-webdl",
+   "group": "source",
+   "label": "WEB-DL",
+   "accent": "#519ef7",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b|\\bweb-?rip\\b|\\bhdtv\\b|\\b(dvd|dvdrip)\\b|\\btvrip\\b|\\b(blu-?ray|bdrip|brrip)\\b)).)*?\\bweb-?dl\\b"
+  },
+  {
+   "id": "source-webrip",
+   "group": "source",
+   "label": "WEBRIP",
+   "accent": "#28bce1",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b|\\bweb-?dl\\b|\\bhdtv\\b|\\b(dvd|dvdrip)\\b|\\btvrip\\b|\\b(blu-?ray|bdrip|brrip)\\b)).)*?\\bweb-?rip\\b"
+  },
+  {
+   "id": "source-hdtv",
+   "group": "source",
+   "label": "HDTV",
+   "accent": "#7187f0",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b|\\bweb-?dl\\b|\\bweb-?rip\\b|\\b(dvd|dvdrip)\\b|\\btvrip\\b|\\b(blu-?ray|bdrip|brrip)\\b)).)*?\\bhdtv\\b"
+  },
+  {
+   "id": "source-dvd",
+   "group": "source",
+   "label": "DVD",
+   "accent": "#9ba9bd",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b|\\bweb-?dl\\b|\\bweb-?rip\\b|\\bhdtv\\b|\\btvrip\\b|\\b(blu-?ray|bdrip|brrip)\\b)).)*?\\b(dvd|dvdrip)\\b"
+  },
+  {
+   "id": "source-tvrip",
+   "group": "source",
+   "label": "TVRIP",
+   "accent": "#6b70f1",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(uhd[\\s._-]*blu-?ray|4k[\\s._-]*blu-?ray)\\b|\\bweb-?dl\\b|\\bweb-?rip\\b|\\bhdtv\\b|\\b(dvd|dvdrip)\\b|\\b(blu-?ray|bdrip|brrip)\\b)).)*?\\btvrip\\b"
+  },
+  {
+   "id": "source-hdrip",
+   "group": "source",
+   "label": "HDRIP",
+   "accent": "#7ba6f5",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])(?:(?:bd|uhd)?remux|blu[\\s._-]?ray|bdrip|brrip|bdmux|web[\\s._-]?dl(?:mux)?|webdl|web[\\s._-]?rip|dvd[\\s._-]?(?:rip|mux)|dvdrip|hdtv|hd[\\s._-]?tv|tvrip)(?![a-z0-9]))).*?(?<![a-z0-9])(?<!hc[\\s._-]?)(?<!hardcoded[\\s._-]?)hd[\\s._-]?rip(?![a-z0-9])"
+  },
+  {
+   "id": "source-hc-hdrip",
+   "group": "source",
+   "label": "HC HDRIP",
+   "accent": "#e32951",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])(?:(?:bd|uhd)?remux|blu[\\s._-]?ray|bdrip|brrip|bdmux|web[\\s._-]?dl(?:mux)?|webdl|web[\\s._-]?rip|dvd[\\s._-]?(?:rip|mux)|dvdrip|hdtv|hd[\\s._-]?tv|tvrip)(?![a-z0-9])|(?<![a-z0-9])(?<!hc[\\s._-]?)(?<!hardcoded[\\s._-]?)hd[\\s._-]?rip(?![a-z0-9]))).*?(?<![a-z0-9])(?:hc[\\s._-]?hd[\\s._-]?rip|hardcoded[\\s._-]?hd[\\s._-]?rip|hardcoded)(?![a-z0-9])"
+  },
+  {
+   "id": "source-scr",
+   "group": "source",
+   "label": "SCREENER",
+   "accent": "#eb5f13",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])(?:(?:bd|uhd)?remux|blu[\\s._-]?ray|bdrip|brrip|bdmux|web[\\s._-]?dl(?:mux)?|webdl|web[\\s._-]?rip|dvd[\\s._-]?(?:rip|mux)|dvdrip|hdtv|hd[\\s._-]?tv|tvrip)(?![a-z0-9])|(?<![a-z0-9])(?<!hc[\\s._-]?)(?<!hardcoded[\\s._-]?)hd[\\s._-]?rip(?![a-z0-9])|(?<![a-z0-9])(?:hc[\\s._-]?hd[\\s._-]?rip|hardcoded[\\s._-]?hd[\\s._-]?rip|hardcoded)(?![a-z0-9]))).*?(?<![a-z0-9])(?:screener|dvd[\\s._-]?scr(?:eener)?|(?-i:SCR))(?![a-z0-9])"
+  },
+  {
+   "id": "source-tc",
+   "group": "source",
+   "label": "TELECINE",
+   "accent": "#da7e0f",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])(?:(?:bd|uhd)?remux|blu[\\s._-]?ray|bdrip|brrip|bdmux|web[\\s._-]?dl(?:mux)?|webdl|web[\\s._-]?rip|dvd[\\s._-]?(?:rip|mux)|dvdrip|hdtv|hd[\\s._-]?tv|tvrip)(?![a-z0-9])|(?<![a-z0-9])(?<!hc[\\s._-]?)(?<!hardcoded[\\s._-]?)hd[\\s._-]?rip(?![a-z0-9])|(?<![a-z0-9])(?:hc[\\s._-]?hd[\\s._-]?rip|hardcoded[\\s._-]?hd[\\s._-]?rip|hardcoded)(?![a-z0-9])|(?<![a-z0-9])(?:screener|dvd[\\s._-]?scr(?:eener)?|(?-i:SCR))(?![a-z0-9]))).*?(?<![a-z0-9])(?:telecine|hd[\\s._-]?tc|(?-i:TC))(?![a-z0-9])"
+  },
+  {
+   "id": "source-ts",
+   "group": "source",
+   "label": "TELESYNC",
+   "accent": "#c64912",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])(?:(?:bd|uhd)?remux|blu[\\s._-]?ray|bdrip|brrip|bdmux|web[\\s._-]?dl(?:mux)?|webdl|web[\\s._-]?rip|dvd[\\s._-]?(?:rip|mux)|dvdrip|hdtv|hd[\\s._-]?tv|tvrip)(?![a-z0-9])|(?<![a-z0-9])(?<!hc[\\s._-]?)(?<!hardcoded[\\s._-]?)hd[\\s._-]?rip(?![a-z0-9])|(?<![a-z0-9])(?:hc[\\s._-]?hd[\\s._-]?rip|hardcoded[\\s._-]?hd[\\s._-]?rip|hardcoded)(?![a-z0-9])|(?<![a-z0-9])(?:screener|dvd[\\s._-]?scr(?:eener)?|(?-i:SCR))(?![a-z0-9])|(?<![a-z0-9])(?:telecine|hd[\\s._-]?tc|(?-i:TC))(?![a-z0-9]))).*?(?<![a-z0-9])(?:telesync|hd[\\s._-]?ts|hdts|pdvd|(?-i:TS))(?![a-z0-9])"
+  },
+  {
+   "id": "source-cam",
+   "group": "source",
+   "label": "CAM",
+   "accent": "#e95b5b",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])(?:(?:bd|uhd)?remux|blu[\\s._-]?ray|bdrip|brrip|bdmux|web[\\s._-]?dl(?:mux)?|webdl|web[\\s._-]?rip|dvd[\\s._-]?(?:rip|mux)|dvdrip|hdtv|hd[\\s._-]?tv|tvrip)(?![a-z0-9])|(?<![a-z0-9])(?<!hc[\\s._-]?)(?<!hardcoded[\\s._-]?)hd[\\s._-]?rip(?![a-z0-9])|(?<![a-z0-9])(?:hc[\\s._-]?hd[\\s._-]?rip|hardcoded[\\s._-]?hd[\\s._-]?rip|hardcoded)(?![a-z0-9])|(?<![a-z0-9])(?:screener|dvd[\\s._-]?scr(?:eener)?|(?-i:SCR))(?![a-z0-9])|(?<![a-z0-9])(?:telecine|hd[\\s._-]?tc|(?-i:TC))(?![a-z0-9])|(?<![a-z0-9])(?:telesync|hd[\\s._-]?ts|hdts|pdvd|(?-i:TS))(?![a-z0-9]))).*?(?<![a-z0-9])(?:camrip|hd[\\s._-]?cam|hdcam|(?-i:CAM))(?![a-z0-9])"
+  },
+  {
+   "id": "res-8k",
+   "group": "resolution",
+   "label": "8K",
+   "accent": "#df3737",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:2160p|1440p|1080p|720p|576p|480p|360p|240p|144p)\\b).)*?\\b(?:4320p)\\b|^(?!.*\\b(?:4320p|2160p|1440p|1080p|720p|576p|480p|360p|240p|144p)\\b)(?:(?!\\b(?:4k|uhd|ultra[\\s._-]*hd|2k|qhd|fhd|full[\\s._-]*hd)\\b).)*?\\b(?:8k)\\b)"
+  },
+  {
+   "id": "res-4k",
+   "group": "resolution",
+   "label": "4K",
+   "accent": "#f5a519",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|1440p|1080p|720p|576p|480p|360p|240p|144p)\\b).)*?\\b(?:2160p)\\b|^(?!.*\\b(?:4320p|2160p|1440p|1080p|720p|576p|480p|360p|240p|144p)\\b)(?:(?!\\b(?:8k|2k|qhd|fhd|full[\\s._-]*hd)\\b).)*?\\b(?:4k|uhd|ultra[\\s._-]*hd)\\b)"
+  },
+  {
+   "id": "res-1440p",
+   "group": "resolution",
+   "label": "1440P",
+   "accent": "#1e96d2",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|2160p|1080p|720p|576p|480p|360p|240p|144p)\\b).)*?\\b(?:1440p)\\b|^(?!.*\\b(?:4320p|2160p|1440p|1080p|720p|576p|480p|360p|240p|144p)\\b)(?:(?!\\b(?:8k|4k|uhd|ultra[\\s._-]*hd|fhd|full[\\s._-]*hd)\\b).)*?\\b(?:2k|qhd)\\b)"
+  },
+  {
+   "id": "res-1080p",
+   "group": "resolution",
+   "label": "1080P",
+   "accent": "#23c2d6",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|2160p|1440p|720p|576p|480p|360p|240p|144p)\\b).)*?\\b(?:1080p)\\b|^(?!.*\\b(?:4320p|2160p|1440p|1080p|720p|576p|480p|360p|240p|144p)\\b)(?:(?!\\b(?:8k|4k|uhd|ultra[\\s._-]*hd|2k|qhd)\\b).)*?\\b(?:fhd|full[\\s._-]*hd)\\b)"
+  },
+  {
+   "id": "res-720p",
+   "group": "resolution",
+   "label": "720P",
+   "accent": "#767bf3",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|2160p|1440p|1080p|576p|480p|360p|240p|144p)\\b).)*?\\b(?:720p)\\b)"
+  },
+  {
+   "id": "res-576p",
+   "group": "resolution",
+   "label": "576P",
+   "accent": "#5493f6",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|2160p|1440p|1080p|720p|480p|360p|240p|144p)\\b).)*?\\b(?:576p)\\b)"
+  },
+  {
+   "id": "res-480p",
+   "group": "resolution",
+   "label": "480P",
+   "accent": "#7f8da0",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|2160p|1440p|1080p|720p|576p|360p|240p|144p)\\b).)*?\\b(?:480p)\\b)"
+  },
+  {
+   "id": "res-360p",
+   "group": "resolution",
+   "label": "360P",
+   "accent": "#5a687b",
+   "enabled": true,
+   "pattern": "(?is)(?:^(?:(?!\\b(?:4320p|2160p|1440p|1080p|720p|576p|480p)\\b).)*?\\b(?:360p)\\b)"
+  },
+  {
+   "id": "dr-dolby-vision",
+   "group": "dynamic-range",
+   "label": "DOLBY VISION",
+   "accent": "#b86ff7",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\bhdr|\\b(dv[\\s._-]?p7|dovi[\\s._-]?p7|profile[\\s._-]?7)\\b|\\b(dv[\\s._-]?p8|dovi[\\s._-]?p8|profile[\\s._-]?8)\\b)).*?\\b(dolby[\\s._-]*vision|dovi|dv)\\b"
+  },
+  {
+   "id": "dr-dv-p7",
+   "group": "dynamic-range",
+   "label": "DV P7",
+   "accent": "#a555ee",
+   "enabled": true,
+   "pattern": "(?i)\\b(dv[\\s._-]?p7|dovi[\\s._-]?p7|profile[\\s._-]?7)\\b"
+  },
+  {
+   "id": "dr-dv-p8",
+   "group": "dynamic-range",
+   "label": "DV P8",
+   "accent": "#a176f3",
+   "enabled": true,
+   "pattern": "(?i)\\b(dv[\\s._-]?p8|dovi[\\s._-]?p8|profile[\\s._-]?8)\\b"
+  },
+  {
+   "id": "dr-dv-hdr",
+   "group": "dynamic-range",
+   "label": "DV HDR10",
+   "accent": "#a360f1",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*\\b(?:dolby[\\s._-]*vision|dovi|dv)\\b)(?!.*(?<![a-z0-9])(?:hdr10\\+|hdr10[\\s._-]*plus|hdr[\\s._-]*10[\\s._-]*\\+))(?=.*\\bhdr)(?!.*\\b(?:dv[\\s._-]?p7|dovi[\\s._-]?p7|profile[\\s._-]?7|dv[\\s._-]?p8|dovi[\\s._-]?p8|profile[\\s._-]?8)\\b).*"
+  },
+  {
+   "id": "dr-dv-hdr10plus",
+   "group": "dynamic-range",
+   "label": "DV HDR10+",
+   "accent": "#be4c7e",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*\\b(?:dolby[\\s._-]*vision|dovi|dv)\\b)(?=.*(?<![a-z0-9])(?:hdr10\\+|hdr10[\\s._-]*plus|hdr[\\s._-]*10[\\s._-]*\\+))(?!.*\\b(?:dv[\\s._-]?p7|dovi[\\s._-]?p7|profile[\\s._-]?7|dv[\\s._-]?p8|dovi[\\s._-]?p8|profile[\\s._-]?8)\\b).*"
+  },
+  {
+   "id": "dr-hdr10plus",
+   "group": "dynamic-range",
+   "label": "HDR10+",
+   "accent": "#fcb977",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\b(?:dolby[\\s._-]*vision|dovi|dv)\\b)).*?(?<![a-z0-9])(?:hdr10\\+|hdr10[\\s._-]*plus|hdr[\\s._-]*10[\\s._-]*\\+)"
+  },
+  {
+   "id": "dr-hdr10",
+   "group": "dynamic-range",
+   "label": "HDR10",
+   "accent": "#f9992b",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\b(?:dolby[\\s._-]*vision|dovi|dv)\\b|(?<![a-z0-9])(?:hdr10\\+|hdr10[\\s._-]*plus|hdr[\\s._-]*10[\\s._-]*\\+))).*?\\b(hdr10|hdr[\\s._-]*10)\\b(?!\\s*(?:\\+|plus))"
+  },
+  {
+   "id": "dr-hdr",
+   "group": "dynamic-range",
+   "label": "HDR",
+   "accent": "#f2cf45",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\b(?:dolby[\\s._-]*vision|dovi|dv)\\b|(?<![a-z0-9])(?:hdr10\\+|hdr10[\\s._-]*plus|hdr[\\s._-]*10[\\s._-]*\\+)|\\bhlg\\b|\\bhdr[\\s._-]*10)).*?\\bhdr\\b(?!\\s*(?:10|\\+))"
+  },
+  {
+   "id": "dr-hlg",
+   "group": "dynamic-range",
+   "label": "HLG",
+   "accent": "#b3ec62",
+   "enabled": true,
+   "pattern": "(?i)\\bhlg\\b"
+  },
+  {
+   "id": "dr-12bit",
+   "group": "dynamic-range",
+   "label": "12-BIT",
+   "accent": "#f39a5f",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(10[\\s._-]?bit|hi10p)\\b|\\b8[\\s._-]?bit\\b)).)*?\\b12[\\s._-]?bit\\b"
+  },
+  {
+   "id": "dr-10bit",
+   "group": "dynamic-range",
+   "label": "10-BIT",
+   "accent": "#f8c34d",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b12[\\s._-]?bit\\b|\\b8[\\s._-]?bit\\b)).)*?\\b(10[\\s._-]?bit|hi10p)\\b"
+  },
+  {
+   "id": "dr-8bit",
+   "group": "dynamic-range",
+   "label": "8-BIT",
+   "accent": "#f49e64",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b12[\\s._-]?bit\\b|\\b(10[\\s._-]?bit|hi10p)\\b)).)*?\\b8[\\s._-]?bit\\b"
+  },
+  {
+   "id": "dr-sdr",
+   "group": "dynamic-range",
+   "label": "SDR",
+   "accent": "#a0abbb",
+   "enabled": true,
+   "pattern": "(?i)\\bsdr\\b"
+  },
+  {
+   "id": "format-3d",
+   "group": "video-format",
+   "label": "3D",
+   "accent": "#95aff6",
+   "enabled": true,
+   "pattern": "(?i)\\b(3d|half-?sbs|half-?ou|mvc)\\b"
+  },
+  {
+   "id": "format-hfr",
+   "group": "video-format",
+   "label": "HFR",
+   "accent": "#e4354e",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:\\b(60fps|60[\\s._-]*fps|1080p60|720p60|2160p60)\\b|\\b(50fps|50[\\s._-]*fps|1080p50|720p50)\\b)).*?\\b(hfr|high[\\s._-]*frame[\\s._-]*rate)\\b"
+  },
+  {
+   "id": "format-60fps",
+   "group": "video-format",
+   "label": "60 FPS",
+   "accent": "#e3304c",
+   "enabled": true,
+   "pattern": "(?i)\\b(60fps|60[\\s._-]*fps|1080p60|720p60|2160p60)\\b"
+  },
+  {
+   "id": "format-50fps",
+   "group": "video-format",
+   "label": "50 FPS",
+   "accent": "#c5274d",
+   "enabled": true,
+   "pattern": "(?i)\\b(50fps|50[\\s._-]*fps|1080p50|720p50)\\b"
+  },
+  {
+   "id": "format-live",
+   "group": "video-format",
+   "label": "LIVE",
+   "accent": "#e6365b",
+   "enabled": true,
+   "pattern": "(?i)\\b(live|iptv|broadcast|m3u)\\b"
+  },
+  {
+   "id": "format-interlaced",
+   "group": "video-format",
+   "label": "INTERLACED",
+   "accent": "#23869f",
+   "enabled": true,
+   "pattern": "(?i)\\b(1080i|720i)\\b"
+  },
+  {
+   "id": "acodec-truehd-atmos",
+   "group": "audio-codec",
+   "label": "TRUEHD ATMOS",
+   "accent": "#2fb8e7",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*(?<![a-z0-9])true[\\s._-]*hd(?![a-z]))(?=.*(?<![a-z0-9])(?:atmos|ddpa\\d?)(?![a-z]))"
+  },
+  {
+   "id": "acodec-ddp-atmos",
+   "group": "audio-codec",
+   "label": "DD+ ATMOS",
+   "accent": "#5e64ea",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*(?<![a-z0-9])(?:ddpa|ddp|dd\\+|dolby[\\s._-]*digital[\\s._-]*plus|e-?ac-?3)(?![a-z+]))(?=.*(?<![a-z0-9])(?:atmos|ddpa\\d?)(?![a-z]))(?!.*(?<![a-z0-9])true[\\s._-]*hd(?![a-z]))"
+  },
+  {
+   "id": "acodec-atmos",
+   "group": "audio-codec",
+   "label": "ATMOS",
+   "accent": "#6880f3",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*(?<![a-z0-9])(?:atmos|ddpa\\d?)(?![a-z]))(?!.*(?<![a-z0-9])true[\\s._-]*hd(?![a-z]))(?!.*(?<![a-z0-9])(?:ddpa|ddp|dd\\+|dolby[\\s._-]*digital[\\s._-]*plus|e-?ac-?3)(?![a-z+]))"
+  },
+  {
+   "id": "acodec-truehd",
+   "group": "audio-codec",
+   "label": "TRUEHD",
+   "accent": "#2fb8e7",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*(?<![a-z0-9])true[\\s._-]*hd(?![a-z]))(?!.*(?<![a-z0-9])(?:atmos|ddpa\\d?)(?![a-z]))"
+  },
+  {
+   "id": "acodec-ddplus",
+   "group": "audio-codec",
+   "label": "DD+",
+   "accent": "#5e64ea",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*(?<![a-z0-9])(?:ddpa|ddp|dd\\+|dolby[\\s._-]*digital[\\s._-]*plus|e-?ac-?3)(?![a-z+]))(?!.*(?<![a-z0-9])(?:atmos|ddpa\\d?)(?![a-z]))(?!.*(?<![a-z0-9])true[\\s._-]*hd(?![a-z]))"
+  },
+  {
+   "id": "acodec-dd",
+   "group": "audio-codec",
+   "label": "DD",
+   "accent": "#5752d4",
+   "enabled": true,
+   "pattern": "(?is)^(?=.*(?<![a-z0-9])(?:dd|dolby[\\s._-]*digital|ac-?3)(?![a-z+]))(?!.*(?<![a-z0-9])(?:ddpa|ddp|dd\\+|dolby[\\s._-]*digital[\\s._-]*plus|e-?ac-?3)(?![a-z+]))(?!.*(?<![a-z0-9])(?:atmos|ddpa\\d?)(?![a-z]))(?!.*(?<![a-z0-9])true[\\s._-]*hd(?![a-z]))"
+  },
+  {
+   "id": "acodec-ac4",
+   "group": "audio-codec",
+   "label": "AC-4",
+   "accent": "#6365e9",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])ac-?4(?![a-z0-9])"
+  },
+  {
+   "id": "acodec-dtsx",
+   "group": "audio-codec",
+   "label": "DTS:X",
+   "accent": "#fb9b51",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])dts[\\s._-]*hd(?![a-z])|(?:(?<![a-z0-9])dts[\\s._-]*hd[\\s._-]*(?:ma|master)|(?<![a-z0-9])dts[\\s._-]*ma(?![a-z])|dtshdma))).*?(?<![a-z0-9])dts[\\s._:-]*x(?![a-z0-9])"
+  },
+  {
+   "id": "acodec-dtshd-ma",
+   "group": "audio-codec",
+   "label": "DTS-HD MA",
+   "accent": "#eb6318",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])dts[\\s._:-]*x(?![a-z0-9]))).*?(?<![a-z0-9])(?:dts[\\s._-]*hd[\\s._-]*ma|dts[\\s._-]*hd[\\s._-]*master)(?![a-z0-9])"
+  },
+  {
+   "id": "acodec-dtshd-hra",
+   "group": "audio-codec",
+   "label": "DTS-HD HRA",
+   "accent": "#f98129",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:(?<![a-z0-9])dts[\\s._:-]*x(?![a-z0-9]))).*?(?<![a-z0-9])dts[\\s._-]*hd[\\s._-]*hra(?![a-z0-9])"
+  },
+  {
+   "id": "acodec-dtses",
+   "group": "audio-codec",
+   "label": "DTS-ES",
+   "accent": "#ef8345",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])dts[\\s._-]*es(?![a-z])"
+  },
+  {
+   "id": "acodec-dts",
+   "group": "audio-codec",
+   "label": "DTS",
+   "accent": "#fcb371",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])dts(?![a-z])(?![\\s._:-]*(?:hd|x|ma|es|hra)(?![a-z]))"
+  },
+  {
+   "id": "acodec-flac",
+   "group": "audio-codec",
+   "label": "FLAC",
+   "accent": "#43bc97",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])flac(?![a-z])"
+  },
+  {
+   "id": "acodec-alac",
+   "group": "audio-codec",
+   "label": "ALAC",
+   "accent": "#e86ea6",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])alac(?![a-z])"
+  },
+  {
+   "id": "acodec-pcm",
+   "group": "audio-codec",
+   "label": "PCM",
+   "accent": "#138462",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])l?pcm(?![a-z])"
+  },
+  {
+   "id": "acodec-aac",
+   "group": "audio-codec",
+   "label": "AAC",
+   "accent": "#6e9bf3",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])aac(?![a-z])"
+  },
+  {
+   "id": "acodec-opus",
+   "group": "audio-codec",
+   "label": "OPUS",
+   "accent": "#deb239",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])opus(?![a-z])"
+  },
+  {
+   "id": "acodec-vorbis",
+   "group": "audio-codec",
+   "label": "VORBIS",
+   "accent": "#659228",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])(?:vorbis|ogg)(?![a-z])"
+  },
+  {
+   "id": "acodec-mp3",
+   "group": "audio-codec",
+   "label": "MP3",
+   "accent": "#ea6060",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])mp3(?![a-z])"
+  },
+  {
+   "id": "acodec-wma",
+   "group": "audio-codec",
+   "label": "WMA",
+   "accent": "#4da8bd",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])wma(?![a-z])"
+  },
+  {
+   "id": "codec-vvc",
+   "group": "video-codec",
+   "label": "VVC",
+   "accent": "#e32a51",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\b(vvc|h[\\s.]?266)\\b"
+  },
+  {
+   "id": "codec-av1",
+   "group": "video-codec",
+   "label": "AV1",
+   "accent": "#4ebcd3",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\bav1\\b"
+  },
+  {
+   "id": "codec-hevc",
+   "group": "video-codec",
+   "label": "HEVC",
+   "accent": "#28ac58",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\b(hevc|h[\\s.]?265|x265)\\b"
+  },
+  {
+   "id": "codec-avc",
+   "group": "video-codec",
+   "label": "AVC",
+   "accent": "#8448ee",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\b(avc|h[\\s.]?264|x264)\\b"
+  },
+  {
+   "id": "codec-prores",
+   "group": "video-codec",
+   "label": "PRORES",
+   "accent": "#f07a30",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b"
+  },
+  {
+   "id": "codec-vp9",
+   "group": "video-codec",
+   "label": "VP9",
+   "accent": "#ebb04a",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\bvp9\\b"
+  },
+  {
+   "id": "codec-vp8",
+   "group": "video-codec",
+   "label": "VP8",
+   "accent": "#cca343",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvc-?1\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\bvp8\\b"
+  },
+  {
+   "id": "codec-vc1",
+   "group": "video-codec",
+   "label": "VC-1",
+   "accent": "#8e5ee6",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bxvid\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\bvc-?1\\b"
+  },
+  {
+   "id": "codec-xvid",
+   "group": "video-codec",
+   "label": "XVID",
+   "accent": "#5486e9",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bdivx\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\bxvid\\b"
+  },
+  {
+   "id": "codec-divx",
+   "group": "video-codec",
+   "label": "DIVX",
+   "accent": "#3897c9",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\b(vvc|h[\\s.]?266)\\b|\\bav1\\b|\\b(hevc|h[\\s.]?265|x265)\\b|\\b(avc|h[\\s.]?264|x264)\\b|\\b(prores|prores[\\s._-]*(hq|422|4444|proxy))\\b|\\bvp9\\b|\\bvp8\\b|\\bvc-?1\\b|\\bxvid\\b|\\bmpeg-?4\\b|\\bmpeg-?2\\b|\\bwmv\\b)).)*?\\bdivx\\b"
+  },
+  {
+   "id": "container-mkv",
+   "group": "containers",
+   "label": "MKV",
+   "accent": "#55ce81",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\bmp4\\b|\\b(m2ts|\\.ts\\b)\\b|\\bavi\\b|\\biso\\b)).)*?\\bmkv\\b"
+  },
+  {
+   "id": "container-mp4",
+   "group": "containers",
+   "label": "MP4",
+   "accent": "#4e97f2",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\bmkv\\b|\\b(m2ts|\\.ts\\b)\\b|\\bavi\\b|\\biso\\b)).)*?\\bmp4\\b"
+  },
+  {
+   "id": "container-ts",
+   "group": "containers",
+   "label": "M2TS",
+   "accent": "#8b54f0",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\bmkv\\b|\\bmp4\\b|\\bavi\\b|\\biso\\b)).)*?\\b(m2ts|\\.ts\\b)\\b"
+  },
+  {
+   "id": "container-avi",
+   "group": "containers",
+   "label": "AVI",
+   "accent": "#f2863c",
+   "enabled": true,
+   "pattern": "(?is)^(?:(?!(?:\\bmkv\\b|\\bmp4\\b|\\b(m2ts|\\.ts\\b)\\b|\\biso\\b)).)*?\\bavi\\b"
+  },
+  {
+   "id": "ch-7-1-4",
+   "group": "audio-channels",
+   "label": "7.1.4",
+   "accent": "#5ae5cf",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)7[\\s._-]1[\\s._-]4(?![0-9])"
+  },
+  {
+   "id": "ch-7-1-2",
+   "group": "audio-channels",
+   "label": "7.1.2",
+   "accent": "#59e5cf",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)7[\\s._-]1[\\s._-]2(?![0-9])"
+  },
+  {
+   "id": "ch-5-1-4",
+   "group": "audio-channels",
+   "label": "5.1.4",
+   "accent": "#4dd8c4",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)5[\\s._-]1[\\s._-]4(?![0-9])"
+  },
+  {
+   "id": "ch-5-1-2",
+   "group": "audio-channels",
+   "label": "5.1.2",
+   "accent": "#58e4cf",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)5[\\s._-]1[\\s._-]2(?![0-9])"
+  },
+  {
+   "id": "ch-7-1",
+   "group": "audio-channels",
+   "label": "7.1",
+   "accent": "#16bb84",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)(?:7[\\s._-]1|8ch)(?![0-9])(?![\\s._-][24](?![0-9]))"
+  },
+  {
+   "id": "ch-6-1",
+   "group": "audio-channels",
+   "label": "6.1",
+   "accent": "#16bb84",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)(?:6[\\s._-]1|7ch)(?![0-9])"
+  },
+  {
+   "id": "ch-5-1",
+   "group": "audio-channels",
+   "label": "5.1",
+   "accent": "#16bb84",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)(?:5[\\s._-]1|6ch)(?![0-9])(?![\\s._-][24](?![0-9]))"
+  },
+  {
+   "id": "ch-2-1",
+   "group": "audio-channels",
+   "label": "2.1",
+   "accent": "#6fac17",
+   "enabled": true,
+   "pattern": "(?i)(?<![0-9v])(?<![0-9]\\.)(?:2[\\s._-]1|3ch)(?![0-9])"
+  },
+  {
+   "id": "ch-2-0",
+   "group": "audio-channels",
+   "label": "2.0",
+   "accent": "#6eab16",
+   "enabled": true,
+   "pattern": "(?i)(?:(?<![0-9v])(?<![0-9]\\.)(?:2[\\s._-]0|2ch)(?![0-9])|\\bstereo\\b)"
+  },
+  {
+   "id": "ch-1-0",
+   "group": "audio-channels",
+   "label": "MONO",
+   "accent": "#6caa13",
+   "enabled": true,
+   "pattern": "(?i)(?:(?<![0-9v])(?<![0-9]\\.)(?:1[\\s._-]0|1ch)(?![0-9])|\\bmono\\b)"
+  },
+  {
+   "id": "stream-netflix",
+   "group": "streaming",
+   "label": "NETFLIX",
+   "accent": "#e75656",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])netflix(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:nf)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-prime-video",
+   "group": "streaming",
+   "label": "PRIME VIDEO",
+   "accent": "#1daaea",
+   "enabled": true,
+   "pattern": "(?i)\\b(amazon|amzn|prime[\\s._-]*video)\\b"
+  },
+  {
+   "id": "stream-apple-tv",
+   "group": "streaming",
+   "label": "APPLE TV+",
+   "accent": "#929fb0",
+   "enabled": true,
+   "pattern": "(?i)\\b(apple[\\s._-]*tv\\+?|atvp)\\b"
+  },
+  {
+   "id": "stream-disney-plus",
+   "group": "streaming",
+   "label": "DISNEY+",
+   "accent": "#4e80e7",
+   "enabled": true,
+   "pattern": "(?is)^(?!.*(?:hotstar)).*?\\b(disney\\+?|dsnp)\\b"
+  },
+  {
+   "id": "stream-max",
+   "group": "streaming",
+   "label": "MAX",
+   "accent": "#793cde",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])(?:hbo[\\s._-]*max|hmax)(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:max)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-hulu",
+   "group": "streaming",
+   "label": "HULU",
+   "accent": "#46c475",
+   "enabled": true,
+   "pattern": "(?i)\\bhulu\\b"
+  },
+  {
+   "id": "stream-paramount",
+   "group": "streaming",
+   "label": "PARAMOUNT+",
+   "accent": "#5899f1",
+   "enabled": true,
+   "pattern": "(?i)\\b(paramount\\+?|pmtp)\\b"
+  },
+  {
+   "id": "stream-peacock",
+   "group": "streaming",
+   "label": "PEACOCK",
+   "accent": "#f08423",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])peacock(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:pck|pcok)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-youtube",
+   "group": "streaming",
+   "label": "YOUTUBE",
+   "accent": "#f36f6f",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])youtube(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:yt)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-jiohotstar",
+   "group": "streaming",
+   "label": "JIOHOTSTAR",
+   "accent": "#cf427f",
+   "enabled": true,
+   "pattern": "(?i)\\b(jiohotstar|hotstar|jio[\\s._-]*hotstar)\\b"
+  },
+  {
+   "id": "stream-zee5",
+   "group": "streaming",
+   "label": "ZEE5",
+   "accent": "#9a6ff3",
+   "enabled": true,
+   "pattern": "(?i)\\bzee5\\b"
+  },
+  {
+   "id": "stream-sonyliv",
+   "group": "streaming",
+   "label": "SONYLIV",
+   "accent": "#6969de",
+   "enabled": true,
+   "pattern": "(?i)\\b(sonyliv|sony[\\s._-]*liv)\\b"
+  },
+  {
+   "id": "stream-jiocinema",
+   "group": "streaming",
+   "label": "JIOCINEMA",
+   "accent": "#d14683",
+   "enabled": true,
+   "pattern": "(?i)\\b(jiocinema|jio[\\s._-]*cinema)\\b"
+  },
+  {
+   "id": "stream-aha",
+   "group": "streaming",
+   "label": "AHA",
+   "accent": "#fa913e",
+   "enabled": true,
+   "pattern": "(?is)(?:(?!)|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:aha)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-sunnxt",
+   "group": "streaming",
+   "label": "SUN NXT",
+   "accent": "#f2833a",
+   "enabled": true,
+   "pattern": "(?i)\\b(sunnxt|sun[\\s._-]*nxt)\\b"
+  },
+  {
+   "id": "stream-iplayer",
+   "group": "streaming",
+   "label": "IPLAYER",
+   "accent": "#dc307d",
+   "enabled": true,
+   "pattern": "(?i)\\b(iplayer|bbc[\\s._-]*iplayer)\\b"
+  },
+  {
+   "id": "stream-itvx",
+   "group": "streaming",
+   "label": "ITVX",
+   "accent": "#3796c8",
+   "enabled": true,
+   "pattern": "(?i)\\bitvx\\b"
+  },
+  {
+   "id": "stream-ch4",
+   "group": "streaming",
+   "label": "CHANNEL 4",
+   "accent": "#4071e2",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])(?:channel[\\s._-]*4|all4)(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:ch4)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-canal",
+   "group": "streaming",
+   "label": "CANAL+",
+   "accent": "#8a95a3",
+   "enabled": true,
+   "pattern": "(?i)\\b(canal\\+?|canalplus)\\b"
+  },
+  {
+   "id": "stream-movistar",
+   "group": "streaming",
+   "label": "MOVISTAR+",
+   "accent": "#4bb673",
+   "enabled": true,
+   "pattern": "(?i)\\b(movistar\\+?|movistarplus)\\b"
+  },
+  {
+   "id": "stream-skyshowtime",
+   "group": "streaming",
+   "label": "SKYSHOWTIME",
+   "accent": "#5e5ad7",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])(?:skyshowtime|sky[\\s._-]*showtime|skst)(?![a-z0-9])"
+  },
+  {
+   "id": "stream-wowtv",
+   "group": "streaming",
+   "label": "WOW",
+   "accent": "#c053cc",
+   "enabled": true,
+   "pattern": "(?i)\\bwowtv\\b"
+  },
+  {
+   "id": "stream-stan",
+   "group": "streaming",
+   "label": "STAN",
+   "accent": "#4f89f1",
+   "enabled": true,
+   "pattern": "(?is)(?:(?!)|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:stan)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-crave",
+   "group": "streaming",
+   "label": "CRAVE",
+   "accent": "#2fa1da",
+   "enabled": true,
+   "pattern": "(?is)(?:(?!)|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:crave)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-binge",
+   "group": "streaming",
+   "label": "BINGE",
+   "accent": "#e85a5a",
+   "enabled": true,
+   "pattern": "(?is)(?:(?!)|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:binge)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-foxtel",
+   "group": "streaming",
+   "label": "FOXTEL",
+   "accent": "#d56a2f",
+   "enabled": true,
+   "pattern": "(?i)\\bfoxtel\\b"
+  },
+  {
+   "id": "stream-crunchyroll",
+   "group": "streaming",
+   "label": "CRUNCHYROLL",
+   "accent": "#ef7329",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])crunchyroll(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:cr)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-hidive",
+   "group": "streaming",
+   "label": "HIDIVE",
+   "accent": "#43baab",
+   "enabled": true,
+   "pattern": "(?i)\\bhidive\\b"
+  },
+  {
+   "id": "stream-adultswim",
+   "group": "streaming",
+   "label": "ADULT SWIM",
+   "accent": "#5a6779",
+   "enabled": true,
+   "pattern": "(?is)(?:(?<![a-z0-9])adult[\\s._-]*swim(?![a-z0-9])|^(?=.*(?<![a-z0-9])(?:web[\\s._-]?dl|web[\\s._-]?rip|webdl|webrip|web)(?![a-z0-9])).*?(?<![a-z0-9])(?:as)(?![a-z0-9]))"
+  },
+  {
+   "id": "stream-criterion-ch",
+   "group": "streaming",
+   "label": "CRITERION CH",
+   "accent": "#4a586b",
+   "enabled": true,
+   "pattern": "(?i)\\bcriterion[\\s._-]*channel\\b"
+  },
+  {
+   "id": "stream-tubi",
+   "group": "streaming",
+   "label": "TUBI",
+   "accent": "#b069f2",
+   "enabled": true,
+   "pattern": "(?i)\\btubi\\b"
+  },
+  {
+   "id": "stream-pluto",
+   "group": "streaming",
+   "label": "PLUTO TV",
+   "accent": "#d69e13",
+   "enabled": true,
+   "pattern": "(?i)\\b(pluto|plutotv)\\b"
+  },
+  {
+   "id": "stream-freevee",
+   "group": "streaming",
+   "label": "FREEVEE",
+   "accent": "#b8eb5f",
+   "enabled": true,
+   "pattern": "(?i)\\bfreevee\\b"
+  },
+  {
+   "id": "stream-rakuten",
+   "group": "streaming",
+   "label": "RAKUTEN TV",
+   "accent": "#c84343",
+   "enabled": true,
+   "pattern": "(?i)\\brakuten\\b"
+  },
+  {
+   "id": "stream-shahid",
+   "group": "streaming",
+   "label": "SHAHID",
+   "accent": "#41c070",
+   "enabled": true,
+   "pattern": "(?i)\\bshahid\\b"
+  },
+  {
+   "id": "stream-discovery-plus",
+   "group": "streaming",
+   "label": "DISCOVERY+",
+   "accent": "#4e88f1",
+   "enabled": true,
+   "pattern": "(?i)\\b(discovery\\+|discoveryplus|dscnp)\\b"
+  },
+  {
+   "id": "stream-starz",
+   "group": "streaming",
+   "label": "STARZ",
+   "accent": "#828d9d",
+   "enabled": true,
+   "pattern": "(?i)\\bstarz\\b"
+  },
+  {
+   "id": "stream-mubi",
+   "group": "streaming",
+   "label": "MUBI",
+   "accent": "#5ae4cf",
+   "enabled": true,
+   "pattern": "(?i)\\bmubi\\b"
+  },
+  {
+   "id": "stream-curiositystream",
+   "group": "streaming",
+   "label": "CURIOSITY",
+   "accent": "#f5c746",
+   "enabled": true,
+   "pattern": "(?i)\\bcuriosity[\\s._-]*stream\\b"
+  },
+  {
+   "id": "stream-shudder",
+   "group": "streaming",
+   "label": "SHUDDER",
+   "accent": "#be4361",
+   "enabled": true,
+   "pattern": "(?i)\\bshudder\\b"
+  },
+  {
+   "id": "debrid-realdebrid",
+   "group": "debrid",
+   "label": "REAL-DEBRID",
+   "accent": "#e3972d",
+   "enabled": true,
+   "pattern": "(?i)(?:\\[rd\\b[^\\]]*\\]|(?<![a-z0-9])rd\\+|(?<![a-z0-9])real[\\s._-]*debrid(?![a-z0-9])|(?<![a-z0-9])realdebrid(?![a-z0-9]))"
+  },
+  {
+   "id": "debrid-alldebrid",
+   "group": "debrid",
+   "label": "ALLDEBRID",
+   "accent": "#d8a01a",
+   "enabled": true,
+   "pattern": "(?i)(?:\\[ad\\b[^\\]]*\\]|(?<![a-z0-9])ad\\+|\\ball[\\s._-]*debrid\\b)"
+  },
+  {
+   "id": "debrid-premiumize",
+   "group": "debrid",
+   "label": "PREMIUMIZE",
+   "accent": "#bd8e2f",
+   "enabled": true,
+   "pattern": "(?i)(?:\\[pm\\b[^\\]]*\\]|(?<![a-z0-9])pm\\+|\\bpremiumize\\b)"
+  },
+  {
+   "id": "debrid-torbox",
+   "group": "debrid",
+   "label": "TORBOX",
+   "accent": "#d86f34",
+   "enabled": true,
+   "pattern": "(?i)(?:\\[tb\\b[^\\]]*\\]|(?<![a-z0-9])tb\\+|\\btorbox\\b)"
+  },
+  {
+   "id": "debrid-debridlink",
+   "group": "debrid",
+   "label": "DEBRID-LINK",
+   "accent": "#f7d642",
+   "enabled": true,
+   "pattern": "(?i)(?:\\[dl\\b[^\\]]*\\]|(?<![a-z0-9])dl\\+|\\bdebrid[\\s._-]*link|debridlink\\b)"
+  },
+  {
+   "id": "lang-en",
+   "group": "languages",
+   "label": "ENGLISH",
+   "accent": "#ff6681",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:english|inglés|ingles|anglais|englisch|English)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:eng)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:english|inglés|ingles|anglais|englisch|English)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:eng)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:(?!.*(?:(?<![\\p{L}\\p{N}])(?:en[-_]?us|us[\\s._-]?english|american[\\s._-]?english|english[\\s._-]?\\(?us\\)?)(?![\\p{L}\\p{N}])|🇺🇸|(?<![\\p{L}\\p{N}])(?:en[-_]?gb|en[-_]?uk|british[\\s._-]?english|uk[\\s._-]?english|english[\\s._-]?\\(?uk\\)?|eng[-_]?uk)(?![\\p{L}\\p{N}])|🇬🇧)).*?(?:(?<![\\p{L}\\p{N}])(?:english|inglés|ingles|anglais|englisch|English)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9])|(?<![\\p{L}\\p{N}])(?:en[-_]?us|us[\\s._-]?english|american[\\s._-]?english|english[\\s._-]?\\(?us\\)?)(?![\\p{L}\\p{N}])|🇺🇸|(?<![\\p{L}\\p{N}])(?:en[-_]?gb|en[-_]?uk|british[\\s._-]?english|uk[\\s._-]?english|english[\\s._-]?\\(?uk\\)?|eng[-_]?uk)(?![\\p{L}\\p{N}])|🇬🇧)).*?(?:(?<![\\p{L}\\p{N}])(?:eng)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-en-us",
+   "group": "languages",
+   "label": "ENGLISH US",
+   "accent": "#dfa2a6",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:en[-_]?us|us[\\s._-]?english|american[\\s._-]?english|english[\\s._-]?\\(?us\\)?)(?![\\p{L}\\p{N}])|🇺🇸)|(?:(?<![\\p{L}\\p{N}])(?:en[-_]?us|us[\\s._-]?english|american[\\s._-]?english|english[\\s._-]?\\(?us\\)?)(?![\\p{L}\\p{N}])|🇺🇸)[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:en[-_]?us|us[\\s._-]?english|american[\\s._-]?english|english[\\s._-]?\\(?us\\)?)(?![\\p{L}\\p{N}])|🇺🇸))"
+  },
+  {
+   "id": "lang-en-gb",
+   "group": "languages",
+   "label": "ENGLISH UK",
+   "accent": "#dd6e80",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:en[-_]?gb|en[-_]?uk|british[\\s._-]?english|uk[\\s._-]?english|english[\\s._-]?\\(?uk\\)?|eng[-_]?uk)(?![\\p{L}\\p{N}])|🇬🇧)|(?:(?<![\\p{L}\\p{N}])(?:en[-_]?gb|en[-_]?uk|british[\\s._-]?english|uk[\\s._-]?english|english[\\s._-]?\\(?uk\\)?|eng[-_]?uk)(?![\\p{L}\\p{N}])|🇬🇧)[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:en[-_]?gb|en[-_]?uk|british[\\s._-]?english|uk[\\s._-]?english|english[\\s._-]?\\(?uk\\)?|eng[-_]?uk)(?![\\p{L}\\p{N}])|🇬🇧))"
+  },
+  {
+   "id": "lang-ml",
+   "group": "languages",
+   "label": "MALAYALAM",
+   "accent": "#e8c17e",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:malayalam|മലയാളം)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:mlm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:malayalam|മലയാളം)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:mlm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:malayalam|മലയാളം)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:mlm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAL)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ta",
+   "group": "languages",
+   "label": "TAMIL",
+   "accent": "#ffbb78",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:tamil|தமிழ்|தமிழ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TAM)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:tamil|தமிழ்|தமிழ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TAM)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:tamil|தமிழ்|தமிழ)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:TAM)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-hi",
+   "group": "languages",
+   "label": "HINDI",
+   "accent": "#ffbd7c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:hindi|हिंदी|हिन्दी|हिनदी)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:hin)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:hindi|हिंदी|हिन्दी|हिनदी)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:hin)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:hindi|हिंदी|हिन्दी|हिनदी)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:hin)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-te",
+   "group": "languages",
+   "label": "TELUGU",
+   "accent": "#d7be76",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:telugu|తెలుగు)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TEL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:telugu|తెలుగు)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TEL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:telugu|తెలుగు)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:TEL)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-kn",
+   "group": "languages",
+   "label": "KANNADA",
+   "accent": "#ffc082",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:kannada|ಕನ್ನಡ|ಕನನಡ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:KAN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:kannada|ಕನ್ನಡ|ಕನನಡ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:KAN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:kannada|ಕನ್ನಡ|ಕನನಡ)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:KAN)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-bn",
+   "group": "languages",
+   "label": "BENGALI",
+   "accent": "#e87783",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:bengali|bangla|বাংলা)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:BEN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:bengali|bangla|বাংলা)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:BEN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:bengali|bangla|বাংলা)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:BEN)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-mr",
+   "group": "languages",
+   "label": "MARATHI",
+   "accent": "#ffbe7f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:marathi|मराठी)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAR)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:marathi|मराठी)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAR)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:marathi|मराठी)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:MAR)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-gu",
+   "group": "languages",
+   "label": "GUJARATI",
+   "accent": "#e8bf7c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:gujarati|ગુજરાતી)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:guj)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:gujarati|ગુજરાતી)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:guj)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:gujarati|ગુજરાતી)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:guj)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-pa",
+   "group": "languages",
+   "label": "PUNJABI",
+   "accent": "#e8be7a",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:punjabi|panjabi|ਪੰਜਾਬੀ)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:pnb)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PAN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:punjabi|panjabi|ਪੰਜਾਬੀ)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:pnb)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PAN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:punjabi|panjabi|ਪੰਜਾਬੀ)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:pnb)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PAN)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ur",
+   "group": "languages",
+   "label": "URDU",
+   "accent": "#6b9a6a",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:urdu|اردو)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:urd)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:urdu|اردو)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:urd)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:urdu|اردو)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:urd)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-ja",
+   "group": "languages",
+   "label": "JAPANESE",
+   "accent": "#ff3355",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:japanese|nihongo|日本語)(?![\\p{L}\\p{N}])|🇯🇵|(?<![\\p{L}\\p{N}])(?:jpn)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:JAP)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:japanese|nihongo|日本語)(?![\\p{L}\\p{N}])|🇯🇵|(?<![\\p{L}\\p{N}])(?:jpn)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:JAP)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:japanese|nihongo|日本語)(?![\\p{L}\\p{N}])|🇯🇵)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:jpn)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:JAP)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ko",
+   "group": "languages",
+   "label": "KOREAN",
+   "accent": "#d64473",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:korean|hangugeo|hangul|한국어|한국어)(?![\\p{L}\\p{N}])|🇰🇷|(?<![\\p{L}\\p{N}])(?:kor)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:korean|hangugeo|hangul|한국어|한국어)(?![\\p{L}\\p{N}])|🇰🇷|(?<![\\p{L}\\p{N}])(?:kor)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:korean|hangugeo|hangul|한국어|한국어)(?![\\p{L}\\p{N}])|🇰🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:kor)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-zh",
+   "group": "languages",
+   "label": "CHINESE",
+   "accent": "#f16a6f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:(?<!traditional[\\s._-]{0,2})chinese(?![\\s._-]{0,2}\\(?trad)|mandarin|putonghua|zhongwen|simplified|简体中文|简体|普通话|国语|國語|中文)(?![\\p{L}\\p{N}])|🇨🇳|(?<![\\p{L}\\p{N}])(?:chs|cmn|zho)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CHI)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:(?<!traditional[\\s._-]{0,2})chinese(?![\\s._-]{0,2}\\(?trad)|mandarin|putonghua|zhongwen|simplified|简体中文|简体|普通话|国语|國語|中文)(?![\\p{L}\\p{N}])|🇨🇳|(?<![\\p{L}\\p{N}])(?:chs|cmn|zho)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CHI)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:(?!.*(?:(?<![\\p{L}\\p{N}])(?:cantonese|粤语|粵語|廣東話|广东话|yue)(?![\\p{L}\\p{N}]))).*?(?:(?<![\\p{L}\\p{N}])(?:(?<!traditional[\\s._-]{0,2})chinese(?![\\s._-]{0,2}\\(?trad)|mandarin|putonghua|zhongwen|simplified|简体中文|简体|普通话|国语|國語|中文)(?![\\p{L}\\p{N}])|🇨🇳)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9])|(?<![\\p{L}\\p{N}])(?:cantonese|粤语|粵語|廣東話|广东话|yue)(?![\\p{L}\\p{N}]))).*?(?:(?<![\\p{L}\\p{N}])(?:chs|cmn|zho)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CHI)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-zh-tw",
+   "group": "languages",
+   "label": "CHINESE TW",
+   "accent": "#ea696c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:traditional[\\s._-]*chinese|chinese[\\s._-]*traditional|繁體|繁体|big5|zh[\\s._-]*tw|zh[\\s._-]*tw|zh[\\s._-]*hant|zh[\\s._-]*hk|zh[\\s._-]*cht|繁體中文)(?![\\p{L}\\p{N}])|🇹🇼|🇭🇰|(?<![\\p{L}\\p{N}])(?:cht|zht)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:traditional[\\s._-]*chinese|chinese[\\s._-]*traditional|繁體|繁体|big5|zh[\\s._-]*tw|zh[\\s._-]*tw|zh[\\s._-]*hant|zh[\\s._-]*hk|zh[\\s._-]*cht|繁體中文)(?![\\p{L}\\p{N}])|🇹🇼|🇭🇰|(?<![\\p{L}\\p{N}])(?:cht|zht)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:traditional[\\s._-]*chinese|chinese[\\s._-]*traditional|繁體|繁体|big5|zh[\\s._-]*tw|zh[\\s._-]*tw|zh[\\s._-]*hant|zh[\\s._-]*hk|zh[\\s._-]*cht|繁體中文)(?![\\p{L}\\p{N}])|🇹🇼|🇭🇰)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:cht|zht)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-yue",
+   "group": "languages",
+   "label": "CANTONESE",
+   "accent": "#f26f7c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:cantonese|粤语|粵語|廣東話|广东话)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:yue)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:cantonese|粤语|粵語|廣東話|广东话)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:yue)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:cantonese|粤语|粵語|廣東話|广东话)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:yue)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-ar",
+   "group": "languages",
+   "label": "ARABIC",
+   "accent": "#21c45d",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:arabic|arabe|العربية|عربي|arab(?!ic))(?![\\p{L}\\p{N}])|🇸🇦|🇦🇪|🇪🇬|(?<![\\p{L}\\p{N}])(?:ara)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:arabic|arabe|العربية|عربي|arab(?!ic))(?![\\p{L}\\p{N}])|🇸🇦|🇦🇪|🇪🇬|(?<![\\p{L}\\p{N}])(?:ara)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:arabic|arabe|العربية|عربي|arab(?!ic))(?![\\p{L}\\p{N}])|🇸🇦|🇦🇪|🇪🇬)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ara)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-es",
+   "group": "languages",
+   "label": "SPANISH",
+   "accent": "#ff713b",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:spanish|español|espanol|castellano|castilian|es[\\s._-]*es|Español|Espanol)(?![\\p{L}\\p{N}])|🇪🇸|(?<![\\p{L}\\p{N}])(?:spa)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:spanish|español|espanol|castellano|castilian|es[\\s._-]*es|Español|Espanol)(?![\\p{L}\\p{N}])|🇪🇸|(?<![\\p{L}\\p{N}])(?:spa)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:(?!.*(?:(?<![\\p{L}\\p{N}])(?:latino|latin[\\s._-]?spanish|latam|es[\\s._-]?(?:la|mx|419|ar|co|cl)|spanish[\\s._-]?latino)(?![\\p{L}\\p{N}])|🇲🇽|🇦🇷)).*?(?:(?<![\\p{L}\\p{N}])(?:spanish|español|espanol|castellano|castilian|es[\\s._-]*es|Español|Espanol)(?![\\p{L}\\p{N}])|🇪🇸)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9])|(?<![\\p{L}\\p{N}])(?:latino|latin[\\s._-]?spanish|latam|es[\\s._-]?(?:la|mx|419|ar|co|cl)|spanish[\\s._-]?latino)(?![\\p{L}\\p{N}])|🇲🇽|🇦🇷)).*?(?:(?<![\\p{L}\\p{N}])(?:spa)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-es-419",
+   "group": "languages",
+   "label": "LATINO",
+   "accent": "#e06c79",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:latino|latin[\\s._-]?spanish|latam|es[\\s._-]?(?:la|mx|419|ar|co|cl)|spanish[\\s._-]?latino)(?![\\p{L}\\p{N}])|🇲🇽|🇦🇷)|(?:(?<![\\p{L}\\p{N}])(?:latino|latin[\\s._-]?spanish|latam|es[\\s._-]?(?:la|mx|419|ar|co|cl)|spanish[\\s._-]?latino)(?![\\p{L}\\p{N}])|🇲🇽|🇦🇷)[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:latino|latin[\\s._-]?spanish|latam|es[\\s._-]?(?:la|mx|419|ar|co|cl)|spanish[\\s._-]?latino)(?![\\p{L}\\p{N}])|🇲🇽|🇦🇷))"
+  },
+  {
+   "id": "lang-fr",
+   "group": "languages",
+   "label": "FRENCH",
+   "accent": "#c66d93",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:french|français|francais|truefrench|vf2|vostfr|français[\\s._-]*canadien|Français|francais[\\s._-]*canadien|Francais)(?![\\p{L}\\p{N}])|🇫🇷|(?<![\\p{L}\\p{N}])(?:fra|fre|vf|vff|vfi|vfq)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:french|français|francais|truefrench|vf2|vostfr|français[\\s._-]*canadien|Français|francais[\\s._-]*canadien|Francais)(?![\\p{L}\\p{N}])|🇫🇷|(?<![\\p{L}\\p{N}])(?:fra|fre|vf|vff|vfi|vfq)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:french|français|francais|truefrench|vf2|vostfr|français[\\s._-]*canadien|Français|francais[\\s._-]*canadien|Francais)(?![\\p{L}\\p{N}])|🇫🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:fra|fre|vf|vff|vfi|vfq)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-de",
+   "group": "languages",
+   "label": "GERMAN",
+   "accent": "#ff473b",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:german|deutsch|allemand|deutsche|Deutsch)(?![\\p{L}\\p{N}])|🇩🇪|(?<![\\p{L}\\p{N}])(?:deu)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GER)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:german|deutsch|allemand|deutsche|Deutsch)(?![\\p{L}\\p{N}])|🇩🇪|(?<![\\p{L}\\p{N}])(?:deu)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GER)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:german|deutsch|allemand|deutsche|Deutsch)(?![\\p{L}\\p{N}])|🇩🇪)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:deu)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GER)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-it",
+   "group": "languages",
+   "label": "ITALIAN",
+   "accent": "#ff6161",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:italian|italiano|italien|Italiano)(?![\\p{L}\\p{N}])|🇮🇹|(?<![\\p{L}\\p{N}])(?:ita)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:italian|italiano|italien|Italiano)(?![\\p{L}\\p{N}])|🇮🇹|(?<![\\p{L}\\p{N}])(?:ita)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:italian|italiano|italien|Italiano)(?![\\p{L}\\p{N}])|🇮🇹)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ita)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-pt",
+   "group": "languages",
+   "label": "PORTUGUESE",
+   "accent": "#f45c58",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:portuguese|português|portugues|brazilian|pt[\\s._-]*br|ptbr|pt[\\s._-]*pt|ptpt|Português|Portugues)(?![\\p{L}\\p{N}])|🇵🇹|🇧🇷|(?<![\\p{L}\\p{N}])(?:ptb)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:POR)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:portuguese|português|portugues|brazilian|pt[\\s._-]*br|ptbr|pt[\\s._-]*pt|ptpt|Português|Portugues)(?![\\p{L}\\p{N}])|🇵🇹|🇧🇷|(?<![\\p{L}\\p{N}])(?:ptb)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:POR)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:portuguese|português|portugues|brazilian|pt[\\s._-]*br|ptbr|pt[\\s._-]*pt|ptpt|Português|Portugues)(?![\\p{L}\\p{N}])|🇵🇹|🇧🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ptb)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:POR)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ru",
+   "group": "languages",
+   "label": "RUSSIAN",
+   "accent": "#5982fe",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:russian|русский|russkiy|Русский|русскии|Русскии)(?![\\p{L}\\p{N}])|🇷🇺|(?<![A-Za-z0-9])(?-i:RUS)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:russian|русский|russkiy|Русский|русскии|Русскии)(?![\\p{L}\\p{N}])|🇷🇺|(?<![A-Za-z0-9])(?-i:RUS)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:russian|русский|russkiy|Русский|русскии|Русскии)(?![\\p{L}\\p{N}])|🇷🇺)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:RUS)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-tr",
+   "group": "languages",
+   "label": "TURKISH",
+   "accent": "#ec6870",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:turkish|türkçe|turkce|turk|türk|Türkçe|Turkce)(?![\\p{L}\\p{N}])|🇹🇷|(?<![\\p{L}\\p{N}])(?:tur)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:turkish|türkçe|turkce|turk|türk|Türkçe|Turkce)(?![\\p{L}\\p{N}])|🇹🇷|(?<![\\p{L}\\p{N}])(?:tur)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:turkish|türkçe|turkce|turk|türk|Türkçe|Turkce)(?![\\p{L}\\p{N}])|🇹🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:tur)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-pl",
+   "group": "languages",
+   "label": "POLISH",
+   "accent": "#eb8397",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:polish|polski|polskie|lektor|Polski)(?![\\p{L}\\p{N}])|🇵🇱|(?<![A-Za-z0-9])(?-i:POL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:polish|polski|polskie|lektor|Polski)(?![\\p{L}\\p{N}])|🇵🇱|(?<![A-Za-z0-9])(?-i:POL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:polish|polski|polskie|lektor|Polski)(?![\\p{L}\\p{N}])|🇵🇱)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:POL)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-nl",
+   "group": "languages",
+   "label": "DUTCH",
+   "accent": "#dc9fa4",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:dutch|nederlands|flemish|vlaams|Nederlands)(?![\\p{L}\\p{N}])|🇳🇱|(?<![\\p{L}\\p{N}])(?:nld)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:DUT)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:dutch|nederlands|flemish|vlaams|Nederlands)(?![\\p{L}\\p{N}])|🇳🇱|(?<![\\p{L}\\p{N}])(?:nld)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:DUT)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:dutch|nederlands|flemish|vlaams|Nederlands)(?![\\p{L}\\p{N}])|🇳🇱)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:nld)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:DUT)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-sv",
+   "group": "languages",
+   "label": "SWEDISH",
+   "accent": "#eec410",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:swedish|svenska|swedes|Svenska)(?![\\p{L}\\p{N}])|🇸🇪|(?<![\\p{L}\\p{N}])(?:swe)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:swedish|svenska|swedes|Svenska)(?![\\p{L}\\p{N}])|🇸🇪|(?<![\\p{L}\\p{N}])(?:swe)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:swedish|svenska|swedes|Svenska)(?![\\p{L}\\p{N}])|🇸🇪)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:swe)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-no",
+   "group": "languages",
+   "label": "NORWEGIAN",
+   "accent": "#f3818a",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:norwegian|norsk|bokmål|bokmal|nynorsk|Norsk)(?![\\p{L}\\p{N}])|🇳🇴|(?<![\\p{L}\\p{N}])(?:nno|nob)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:NOR)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:norwegian|norsk|bokmål|bokmal|nynorsk|Norsk)(?![\\p{L}\\p{N}])|🇳🇴|(?<![\\p{L}\\p{N}])(?:nno|nob)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:NOR)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:norwegian|norsk|bokmål|bokmal|nynorsk|Norsk)(?![\\p{L}\\p{N}])|🇳🇴)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:nno|nob)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:NOR)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-da",
+   "group": "languages",
+   "label": "DANISH",
+   "accent": "#dc687b",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:danish|dansk|Dansk)(?![\\p{L}\\p{N}])|🇩🇰|(?<![A-Za-z0-9])(?-i:DAN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:danish|dansk|Dansk)(?![\\p{L}\\p{N}])|🇩🇰|(?<![A-Za-z0-9])(?-i:DAN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:danish|dansk|Dansk)(?![\\p{L}\\p{N}])|🇩🇰)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:DAN)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-fi",
+   "group": "languages",
+   "label": "FINNISH",
+   "accent": "#607da3",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:finnish|suomi|Suomi)(?![\\p{L}\\p{N}])|🇫🇮|(?<![A-Za-z0-9])(?-i:FIN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:finnish|suomi|Suomi)(?![\\p{L}\\p{N}])|🇫🇮|(?<![A-Za-z0-9])(?-i:FIN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:finnish|suomi|Suomi)(?![\\p{L}\\p{N}])|🇫🇮)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:FIN)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-el",
+   "group": "languages",
+   "label": "GREEK",
+   "accent": "#699bcd",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:greek|ελληνικά|ellinika|Ελληνικά|ελληνικα|Ελληνικα)(?![\\p{L}\\p{N}])|🇬🇷|(?<![\\p{L}\\p{N}])(?:ell)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GRE)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:greek|ελληνικά|ellinika|Ελληνικά|ελληνικα|Ελληνικα)(?![\\p{L}\\p{N}])|🇬🇷|(?<![\\p{L}\\p{N}])(?:ell)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GRE)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:greek|ελληνικά|ellinika|Ελληνικά|ελληνικα|Ελληνικα)(?![\\p{L}\\p{N}])|🇬🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ell)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GRE)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-fa",
+   "group": "languages",
+   "label": "PERSIAN",
+   "accent": "#ec9493",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:persian|farsi|فارسی)(?![\\p{L}\\p{N}])|🇮🇷|(?<![\\p{L}\\p{N}])(?:fas)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PER)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:persian|farsi|فارسی)(?![\\p{L}\\p{N}])|🇮🇷|(?<![\\p{L}\\p{N}])(?:fas)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PER)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:persian|farsi|فارسی)(?![\\p{L}\\p{N}])|🇮🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:fas)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PER)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-th",
+   "group": "languages",
+   "label": "THAI",
+   "accent": "#d79ca7",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:thai|ไทย)(?![\\p{L}\\p{N}])|🇹🇭|(?<![\\p{L}\\p{N}])(?:tha)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:thai|ไทย)(?![\\p{L}\\p{N}])|🇹🇭|(?<![\\p{L}\\p{N}])(?:tha)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:thai|ไทย)(?![\\p{L}\\p{N}])|🇹🇭)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:tha)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-vi",
+   "group": "languages",
+   "label": "VIETNAMESE",
+   "accent": "#fdf605",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:vietnamese|tiếng[\\s._-]*việt|tieng[\\s._-]*viet|Tiếng[\\s._-]*Việt|Tieng[\\s._-]*Viet)(?![\\p{L}\\p{N}])|🇻🇳|(?<![\\p{L}\\p{N}])(?:vie)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:vietnamese|tiếng[\\s._-]*việt|tieng[\\s._-]*viet|Tiếng[\\s._-]*Việt|Tieng[\\s._-]*Viet)(?![\\p{L}\\p{N}])|🇻🇳|(?<![\\p{L}\\p{N}])(?:vie)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:vietnamese|tiếng[\\s._-]*việt|tieng[\\s._-]*viet|Tiếng[\\s._-]*Việt|Tieng[\\s._-]*Viet)(?![\\p{L}\\p{N}])|🇻🇳)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:vie)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-id",
+   "group": "languages",
+   "label": "INDONESIAN",
+   "accent": "#f17880",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:indonesian|bahasa[\\s._-]*indonesia|Bahasa[\\s._-]*Indonesia|bahasa(?![\\s._-]*(?:melayu|malaysia)))(?![\\p{L}\\p{N}])|🇮🇩)|(?:(?<![\\p{L}\\p{N}])(?:indonesian|bahasa[\\s._-]*indonesia|Bahasa[\\s._-]*Indonesia|bahasa(?![\\s._-]*(?:melayu|malaysia)))(?![\\p{L}\\p{N}])|🇮🇩)[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:indonesian|bahasa[\\s._-]*indonesia|Bahasa[\\s._-]*Indonesia|bahasa(?![\\s._-]*(?:melayu|malaysia)))(?![\\p{L}\\p{N}])|🇮🇩))"
+  },
+  {
+   "id": "lang-ms",
+   "group": "languages",
+   "label": "MALAY",
+   "accent": "#e16f6f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:malay|bahasa[\\s._-]*melayu|bahasa[\\s._-]*malaysia|Bahasa[\\s._-]*Melayu|melayu)(?![\\p{L}\\p{N}])|🇲🇾|(?<![\\p{L}\\p{N}])(?:msa|zsm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAY)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:malay|bahasa[\\s._-]*melayu|bahasa[\\s._-]*malaysia|Bahasa[\\s._-]*Melayu|melayu)(?![\\p{L}\\p{N}])|🇲🇾|(?<![\\p{L}\\p{N}])(?:msa|zsm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAY)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:malay|bahasa[\\s._-]*melayu|bahasa[\\s._-]*malaysia|Bahasa[\\s._-]*Melayu|melayu)(?![\\p{L}\\p{N}])|🇲🇾)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:msa|zsm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAY)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-tl",
+   "group": "languages",
+   "label": "FILIPINO",
+   "accent": "#e395a0",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:filipino|tagalog|Filipino)(?![\\p{L}\\p{N}])|🇵🇭|(?<![\\p{L}\\p{N}])(?:tgl)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:FIL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:filipino|tagalog|Filipino)(?![\\p{L}\\p{N}])|🇵🇭|(?<![\\p{L}\\p{N}])(?:tgl)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:FIL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:filipino|tagalog|Filipino)(?![\\p{L}\\p{N}])|🇵🇭)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:tgl)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:FIL)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-uk",
+   "group": "languages",
+   "label": "UKRAINIAN",
+   "accent": "#e2ca22",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:ukrainian|українська|ukrainska|Українська|украінська|Украінська)(?![\\p{L}\\p{N}])|🇺🇦|(?<![\\p{L}\\p{N}])(?:ukr)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:ukrainian|українська|ukrainska|Українська|украінська|Украінська)(?![\\p{L}\\p{N}])|🇺🇦|(?<![\\p{L}\\p{N}])(?:ukr)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:ukrainian|українська|ukrainska|Українська|украінська|Украінська)(?![\\p{L}\\p{N}])|🇺🇦)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ukr)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-cs",
+   "group": "languages",
+   "label": "CZECH",
+   "accent": "#9087a1",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:czech|čeština|cestina|česky|cesky|Čeština|Cestina)(?![\\p{L}\\p{N}])|🇨🇿|(?<![\\p{L}\\p{N}])(?:ces)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CZE)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:czech|čeština|cestina|česky|cesky|Čeština|Cestina)(?![\\p{L}\\p{N}])|🇨🇿|(?<![\\p{L}\\p{N}])(?:ces)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CZE)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:czech|čeština|cestina|česky|cesky|Čeština|Cestina)(?![\\p{L}\\p{N}])|🇨🇿)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ces)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CZE)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-hu",
+   "group": "languages",
+   "label": "HUNGARIAN",
+   "accent": "#74ae4c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:hungarian|magyar|Magyar)(?![\\p{L}\\p{N}])|🇭🇺|(?<![\\p{L}\\p{N}])(?:hun)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:hungarian|magyar|Magyar)(?![\\p{L}\\p{N}])|🇭🇺|(?<![\\p{L}\\p{N}])(?:hun)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:hungarian|magyar|Magyar)(?![\\p{L}\\p{N}])|🇭🇺)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:hun)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-ro",
+   "group": "languages",
+   "label": "ROMANIAN",
+   "accent": "#fad706",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:romanian|română|romana|moldovan|Română|Romana)(?![\\p{L}\\p{N}])|🇷🇴|(?<![\\p{L}\\p{N}])(?:ron)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:RUM)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:romanian|română|romana|moldovan|Română|Romana)(?![\\p{L}\\p{N}])|🇷🇴|(?<![\\p{L}\\p{N}])(?:ron)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:RUM)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:romanian|română|romana|moldovan|Română|Romana)(?![\\p{L}\\p{N}])|🇷🇴)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:ron)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:RUM)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-bg",
+   "group": "languages",
+   "label": "BULGARIAN",
+   "accent": "#0d966f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:bulgarian|български|Български)(?![\\p{L}\\p{N}])|🇧🇬|(?<![\\p{L}\\p{N}])(?:bul)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:bulgarian|български|Български)(?![\\p{L}\\p{N}])|🇧🇬|(?<![\\p{L}\\p{N}])(?:bul)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:bulgarian|български|Български)(?![\\p{L}\\p{N}])|🇧🇬)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:bul)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-hr",
+   "group": "languages",
+   "label": "CROATIAN",
+   "accent": "#ff9595",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:croatian|hrvatski|Hrvatski)(?![\\p{L}\\p{N}])|🇭🇷|(?<![\\p{L}\\p{N}])(?:hrv)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:croatian|hrvatski|Hrvatski)(?![\\p{L}\\p{N}])|🇭🇷|(?<![\\p{L}\\p{N}])(?:hrv)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:croatian|hrvatski|Hrvatski)(?![\\p{L}\\p{N}])|🇭🇷)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:hrv)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-sr",
+   "group": "languages",
+   "label": "SERBIAN",
+   "accent": "#6783a4",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:serbian|srpski|српски|Srpski)(?![\\p{L}\\p{N}])|🇷🇸|(?<![\\p{L}\\p{N}])(?:srp)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:serbian|srpski|српски|Srpski)(?![\\p{L}\\p{N}])|🇷🇸|(?<![\\p{L}\\p{N}])(?:srp)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:serbian|srpski|српски|Srpski)(?![\\p{L}\\p{N}])|🇷🇸)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:srp)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-sk",
+   "group": "languages",
+   "label": "SLOVAK",
+   "accent": "#628bc2",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:slovak|slovenčina|slovencina|slovensky|Slovenčina|Slovencina)(?![\\p{L}\\p{N}])|🇸🇰|(?<![\\p{L}\\p{N}])(?:slk)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SLO)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:slovak|slovenčina|slovencina|slovensky|Slovenčina|Slovencina)(?![\\p{L}\\p{N}])|🇸🇰|(?<![\\p{L}\\p{N}])(?:slk)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SLO)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:slovak|slovenčina|slovencina|slovensky|Slovenčina|Slovencina)(?![\\p{L}\\p{N}])|🇸🇰)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:slk)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SLO)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-sl",
+   "group": "languages",
+   "label": "SLOVENIAN",
+   "accent": "#cb7579",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:slovenian|slovene|slovenščina|slovenscina|Slovenščina|Slovenscina)(?![\\p{L}\\p{N}])|🇸🇮|(?<![\\p{L}\\p{N}])(?:slv)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:slovenian|slovene|slovenščina|slovenscina|Slovenščina|Slovenscina)(?![\\p{L}\\p{N}])|🇸🇮|(?<![\\p{L}\\p{N}])(?:slv)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:slovenian|slovene|slovenščina|slovenscina|Slovenščina|Slovenscina)(?![\\p{L}\\p{N}])|🇸🇮)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:slv)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-lt",
+   "group": "languages",
+   "label": "LITHUANIAN",
+   "accent": "#c3af3a",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:lithuanian|lietuvių|lietuvių[\\s._-]*kalba|lietuviu|Lietuvių|lietuviu[\\s._-]*kalba|Lietuviu)(?![\\p{L}\\p{N}])|🇱🇹|(?<![A-Za-z0-9])(?-i:LIT)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:lithuanian|lietuvių|lietuvių[\\s._-]*kalba|lietuviu|Lietuvių|lietuviu[\\s._-]*kalba|Lietuviu)(?![\\p{L}\\p{N}])|🇱🇹|(?<![A-Za-z0-9])(?-i:LIT)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:lithuanian|lietuvių|lietuvių[\\s._-]*kalba|lietuviu|Lietuvių|lietuviu[\\s._-]*kalba|Lietuviu)(?![\\p{L}\\p{N}])|🇱🇹)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:LIT)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-lv",
+   "group": "languages",
+   "label": "LATVIAN",
+   "accent": "#c88892",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:latvian|latviešu|latviesu|Latviešu|Latviesu)(?![\\p{L}\\p{N}])|🇱🇻|(?<![A-Za-z0-9])(?-i:LAV)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:latvian|latviešu|latviesu|Latviešu|Latviesu)(?![\\p{L}\\p{N}])|🇱🇻|(?<![A-Za-z0-9])(?-i:LAV)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:latvian|latviešu|latviesu|Latviešu|Latviesu)(?![\\p{L}\\p{N}])|🇱🇻)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:LAV)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-et",
+   "group": "languages",
+   "label": "ESTONIAN",
+   "accent": "#4a99e3",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:estonian|eesti|Eesti)(?![\\p{L}\\p{N}])|🇪🇪|(?<![A-Za-z0-9])(?-i:EST)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:estonian|eesti|Eesti)(?![\\p{L}\\p{N}])|🇪🇪|(?<![A-Za-z0-9])(?-i:EST)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:estonian|eesti|Eesti)(?![\\p{L}\\p{N}])|🇪🇪)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:EST)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ca",
+   "group": "languages",
+   "label": "CATALAN",
+   "accent": "#f7c51a",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:catalan|català|catala|valencian|Català|Catala)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CAT)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:catalan|català|catala|valencian|Català|Catala)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:CAT)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:catalan|català|catala|valencian|Català|Catala)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:CAT)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ka",
+   "group": "languages",
+   "label": "GEORGIAN",
+   "accent": "#ff7878",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:georgian|ქართული)(?![\\p{L}\\p{N}])|🇬🇪|(?<![\\p{L}\\p{N}])(?:kat)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GEO)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:georgian|ქართული)(?![\\p{L}\\p{N}])|🇬🇪|(?<![\\p{L}\\p{N}])(?:kat)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GEO)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:georgian|ქართული)(?![\\p{L}\\p{N}])|🇬🇪)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:kat)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:GEO)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-hy",
+   "group": "languages",
+   "label": "ARMENIAN",
+   "accent": "#968b73",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:armenian|հայերեն|Հայերեն)(?![\\p{L}\\p{N}])|🇦🇲|(?<![\\p{L}\\p{N}])(?:hye)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ARM)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:armenian|հայերեն|Հայերեն)(?![\\p{L}\\p{N}])|🇦🇲|(?<![\\p{L}\\p{N}])(?:hye)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ARM)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:armenian|հայերեն|Հայերեն)(?![\\p{L}\\p{N}])|🇦🇲)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:hye)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ARM)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-az",
+   "group": "languages",
+   "label": "AZERBAIJANI",
+   "accent": "#e4767b",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:azerbaijani|azeri|azərbaycanca|azerbaycanca|Azərbaycanca)(?![\\p{L}\\p{N}])|🇦🇿|(?<![\\p{L}\\p{N}])(?:aze)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:azerbaijani|azeri|azərbaycanca|azerbaycanca|Azərbaycanca)(?![\\p{L}\\p{N}])|🇦🇿|(?<![\\p{L}\\p{N}])(?:aze)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:azerbaijani|azeri|azərbaycanca|azerbaycanca|Azərbaycanca)(?![\\p{L}\\p{N}])|🇦🇿)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:aze)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-kk",
+   "group": "languages",
+   "label": "KAZAKH",
+   "accent": "#ece737",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:kazakh|қазақша|қазақ|Қазақша)(?![\\p{L}\\p{N}])|🇰🇿|(?<![\\p{L}\\p{N}])(?:kaz)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:kazakh|қазақша|қазақ|Қазақша)(?![\\p{L}\\p{N}])|🇰🇿|(?<![\\p{L}\\p{N}])(?:kaz)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:kazakh|қазақша|қазақ|Қазақша)(?![\\p{L}\\p{N}])|🇰🇿)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:kaz)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-uz",
+   "group": "languages",
+   "label": "UZBEK",
+   "accent": "#5abdcd",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:uzbek|o'zbekcha|ozbekcha|o‘zbekcha|O'zbekcha)(?![\\p{L}\\p{N}])|🇺🇿|(?<![\\p{L}\\p{N}])(?:uzb)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:uzbek|o'zbekcha|ozbekcha|o‘zbekcha|O'zbekcha)(?![\\p{L}\\p{N}])|🇺🇿|(?<![\\p{L}\\p{N}])(?:uzb)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:uzbek|o'zbekcha|ozbekcha|o‘zbekcha|O'zbekcha)(?![\\p{L}\\p{N}])|🇺🇿)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:uzb)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-mn",
+   "group": "languages",
+   "label": "MONGOLIAN",
+   "accent": "#e06f7b",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:mongolian|монгол|монгол[\\s._-]*хэл|Монгол)(?![\\p{L}\\p{N}])|🇲🇳|(?<![\\p{L}\\p{N}])(?:mng)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MON)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:mongolian|монгол|монгол[\\s._-]*хэл|Монгол)(?![\\p{L}\\p{N}])|🇲🇳|(?<![\\p{L}\\p{N}])(?:mng)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MON)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:mongolian|монгол|монгол[\\s._-]*хэл|Монгол)(?![\\p{L}\\p{N}])|🇲🇳)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:mng)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MON)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-si",
+   "group": "languages",
+   "label": "SINHALA",
+   "accent": "#ff8400",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:sinhala|sinhalese|සිංහල|sinh)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SIN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:sinhala|sinhalese|සිංහල|sinh)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SIN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:sinhala|sinhalese|සිංහල|sinh)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:SIN)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-my",
+   "group": "languages",
+   "label": "BURMESE",
+   "accent": "#8ebd1c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:burmese|myanmar|မြန်မာ|မြနမာ)(?![\\p{L}\\p{N}])|🇲🇲|(?<![\\p{L}\\p{N}])(?:mya)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:BUR)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:burmese|myanmar|မြန်မာ|မြနမာ)(?![\\p{L}\\p{N}])|🇲🇲|(?<![\\p{L}\\p{N}])(?:mya)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:BUR)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:burmese|myanmar|မြန်မာ|မြနမာ)(?![\\p{L}\\p{N}])|🇲🇲)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:mya)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:BUR)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-km",
+   "group": "languages",
+   "label": "KHMER",
+   "accent": "#cf5d7f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:khmer|cambodian|ខ្មែរ|ខមែរ)(?![\\p{L}\\p{N}])|🇰🇭|(?<![\\p{L}\\p{N}])(?:khm)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:khmer|cambodian|ខ្មែរ|ខមែរ)(?![\\p{L}\\p{N}])|🇰🇭|(?<![\\p{L}\\p{N}])(?:khm)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:khmer|cambodian|ខ្មែរ|ខមែរ)(?![\\p{L}\\p{N}])|🇰🇭)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:khm)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-lo",
+   "group": "languages",
+   "label": "LAO",
+   "accent": "#e06b77",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:laotian|ພາສາລາວ)(?![\\p{L}\\p{N}])|🇱🇦|(?<![A-Za-z0-9])(?-i:LAO)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:laotian|ພາສາລາວ)(?![\\p{L}\\p{N}])|🇱🇦|(?<![A-Za-z0-9])(?-i:LAO)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:laotian|ພາສາລາວ)(?![\\p{L}\\p{N}])|🇱🇦)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:LAO)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ne",
+   "group": "languages",
+   "label": "NEPALI",
+   "accent": "#d66365",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:nepali|nepalese|नेपाली)(?![\\p{L}\\p{N}])|🇳🇵|(?<![A-Za-z0-9])(?-i:NEP)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:nepali|nepalese|नेपाली)(?![\\p{L}\\p{N}])|🇳🇵|(?<![A-Za-z0-9])(?-i:NEP)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:nepali|nepalese|नेपाली)(?![\\p{L}\\p{N}])|🇳🇵)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:NEP)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-as",
+   "group": "languages",
+   "label": "ASSAMESE",
+   "accent": "#ffc183",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:assamese|অসমীয়া|অসমীযা)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:asm)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:assamese|অসমীয়া|অসমীযা)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:asm)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:assamese|অসমীয়া|অসমীযা)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:asm)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-or",
+   "group": "languages",
+   "label": "ODIA",
+   "accent": "#ffbd7c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:odia|oriya|ଓଡ଼ିଆ|ଓଡିଆ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ORI)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:odia|oriya|ଓଡ଼ିଆ|ଓଡିଆ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ORI)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:odia|oriya|ଓଡ଼ିଆ|ଓଡିଆ)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:ORI)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-sw",
+   "group": "languages",
+   "label": "SWAHILI",
+   "accent": "#ce5b59",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:swahili|kiswahili|Kiswahili)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SWA)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:swahili|kiswahili|Kiswahili)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SWA)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:swahili|kiswahili|Kiswahili)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:SWA)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-bs",
+   "group": "languages",
+   "label": "BOSNIAN",
+   "accent": "#e9c329",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:bosnian|bosanski|Bosanski)(?![\\p{L}\\p{N}])|🇧🇦|(?<![A-Za-z0-9])(?-i:BOS)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:bosnian|bosanski|Bosanski)(?![\\p{L}\\p{N}])|🇧🇦|(?<![A-Za-z0-9])(?-i:BOS)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:bosnian|bosanski|Bosanski)(?![\\p{L}\\p{N}])|🇧🇦)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:BOS)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-mk",
+   "group": "languages",
+   "label": "MACEDONIAN",
+   "accent": "#f8c911",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:macedonian|македонски|Македонски)(?![\\p{L}\\p{N}])|🇲🇰|(?<![\\p{L}\\p{N}])(?:mkd)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAC)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:macedonian|македонски|Македонски)(?![\\p{L}\\p{N}])|🇲🇰|(?<![\\p{L}\\p{N}])(?:mkd)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAC)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:macedonian|македонски|Македонски)(?![\\p{L}\\p{N}])|🇲🇰)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:mkd)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAC)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-sq",
+   "group": "languages",
+   "label": "ALBANIAN",
+   "accent": "#ea6a6c",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:albanian|shqip|shqipe|Shqip)(?![\\p{L}\\p{N}])|🇦🇱|(?<![\\p{L}\\p{N}])(?:sqi)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ALB)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:albanian|shqip|shqipe|Shqip)(?![\\p{L}\\p{N}])|🇦🇱|(?<![\\p{L}\\p{N}])(?:sqi)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ALB)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:albanian|shqip|shqipe|Shqip)(?![\\p{L}\\p{N}])|🇦🇱)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:sqi)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:ALB)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-be",
+   "group": "languages",
+   "label": "BELARUSIAN",
+   "accent": "#c4736f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:belarusian|belarusan|беларуская|Беларуская)(?![\\p{L}\\p{N}])|🇧🇾|(?<![A-Za-z0-9])(?-i:BEL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:belarusian|belarusan|беларуская|Беларуская)(?![\\p{L}\\p{N}])|🇧🇾|(?<![A-Za-z0-9])(?-i:BEL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:belarusian|belarusan|беларуская|Беларуская)(?![\\p{L}\\p{N}])|🇧🇾)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:BEL)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ht",
+   "group": "languages",
+   "label": "HAITIAN",
+   "accent": "#c56487",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:haitian|haitian[\\s._-]*creole|kreyòl[\\s._-]*ayisyen|kreyol[\\s._-]*ayisyen|kreyol|Kreyòl[\\s._-]*Ayisyen|Kreyol[\\s._-]*Ayisyen)(?![\\p{L}\\p{N}])|🇭🇹|(?<![A-Za-z0-9])(?-i:HAT)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:haitian|haitian[\\s._-]*creole|kreyòl[\\s._-]*ayisyen|kreyol[\\s._-]*ayisyen|kreyol|Kreyòl[\\s._-]*Ayisyen|Kreyol[\\s._-]*Ayisyen)(?![\\p{L}\\p{N}])|🇭🇹|(?<![A-Za-z0-9])(?-i:HAT)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:haitian|haitian[\\s._-]*creole|kreyòl[\\s._-]*ayisyen|kreyol[\\s._-]*ayisyen|kreyol|Kreyòl[\\s._-]*Ayisyen|Kreyol[\\s._-]*Ayisyen)(?![\\p{L}\\p{N}])|🇭🇹)|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:HAT)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ku",
+   "group": "languages",
+   "label": "KURDISH",
+   "accent": "#15998d",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:kurdish|کوردی|kurdî|kurdi|kurmanji|sorani)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:KUR)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:kurdish|کوردی|kurdî|kurdi|kurmanji|sorani)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:KUR)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:kurdish|کوردی|kurdî|kurdi|kurmanji|sorani)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:KUR)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ps",
+   "group": "languages",
+   "label": "PASHTO",
+   "accent": "#139207",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:pashto|pushto|پښتو)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:pst)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PUS)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:pashto|pushto|پښتو)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:pst)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PUS)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:pashto|pushto|پښتو)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:pst)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:PUS)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-sd",
+   "group": "languages",
+   "label": "SINDHI",
+   "accent": "#6b9a6a",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:sindhi|سنڌي)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SND)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:sindhi|سنڌي)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:SND)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:sindhi|سنڌي)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![A-Za-z0-9])(?-i:SND)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-bo",
+   "group": "languages",
+   "label": "TIBETAN",
+   "accent": "#c01f63",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:tibetan|བོད་སྐད་|བོད་ཡིག|བད་སྐད་|བད་ཡག)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:bod)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TIB)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:tibetan|བོད་སྐད་|བོད་ཡིག|བད་སྐད་|བད་ཡག)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:bod)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TIB)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:tibetan|བོད་སྐད་|བོད་ཡིག|བད་སྐད་|བད་ཡག)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:bod)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TIB)(?![A-Za-z0-9])))"
+  },
+  {
+   "id": "lang-ha",
+   "group": "languages",
+   "label": "HAUSA",
+   "accent": "#2e9d72",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:hausa|ha[-_]ng)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:hau)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:hausa|ha[-_]ng)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:hau)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:hausa|ha[-_]ng)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:hau)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "lang-yo",
+   "group": "languages",
+   "label": "YORUBA",
+   "accent": "#2d9c71",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:yoruba|yo[-_]ng)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:yor)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:yoruba|yo[-_]ng)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:yor)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))))(?:.*?(?:(?<![\\p{L}\\p{N}])(?:yoruba|yo[-_]ng)(?![\\p{L}\\p{N}]))|(?!.*(?:(?<![a-z0-9])(?:vs\\.?|v|@|sports?|espn|tsn|nfl|nba|nhl|mlb|mls|ufc|wwe|uefa|fifa|epl|premier[\\s._-]league|champions[\\s._-]league)(?![a-z0-9]))).*?(?:(?<![\\p{L}\\p{N}])(?:yor)(?![\\p{L}\\p{N}])))"
+  },
+  {
+   "id": "flag-dual-audio",
+   "group": "audio-subs",
+   "label": "DUAL AUDIO",
+   "accent": "#1d9f92",
+   "enabled": true,
+   "pattern": "(?i)\\bdual[\\s._-]*audio\\b"
+  },
+  {
+   "id": "flag-multi-audio",
+   "group": "audio-subs",
+   "label": "MULTI AUDIO",
+   "accent": "#129bb9",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])(?:multi[\\s._-]*audios?|multiaudio|multi[\\s._-]*(?:lang(?:uage)?s?|dubs?)(?![a-z0-9])|(?:tri|triple|quad)[\\s._-]*audios?|(?<![0-9])(?<![0-9]\\.)[3-9][\\s._-]*audios?|multi(?![a-z0-9]|[\\s._-]*(?:subs?|subtitles?|cam|core|view|part|plex|verse|track)(?![a-z])))(?![a-z0-9])"
+  },
+  {
+   "id": "flag-dubbed",
+   "group": "audio-subs",
+   "label": "DUBBED",
+   "accent": "#e59f36",
+   "enabled": true,
+   "pattern": "(?i)\\b(dubbed|dub)\\b"
+  },
+  {
+   "id": "flag-original-audio",
+   "group": "audio-subs",
+   "label": "ORIGINAL AUDIO",
+   "accent": "#ecbb1a",
+   "enabled": true,
+   "pattern": "(?i)\\boriginal[\\s._-]*audio\\b"
+  },
+  {
+   "id": "flag-multi-sub",
+   "group": "audio-subs",
+   "label": "MULTI SUBS",
+   "accent": "#5b56e8",
+   "enabled": true,
+   "pattern": "(?i)\\bmulti[\\s._-]*subs?\\b"
+  },
+  {
+   "id": "flag-subpack",
+   "group": "audio-subs",
+   "label": "SUBPACK",
+   "accent": "#9667f2",
+   "enabled": true,
+   "pattern": "(?i)\\bsubpack\\b"
+  },
+  {
+   "id": "flag-cc",
+   "group": "audio-subs",
+   "label": "CC",
+   "accent": "#505d71",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])closed[\\s._-]*captions(?![a-z0-9])|(?<![A-Za-z0-9])(?-i:CC)(?![A-Za-z0-9])"
+  },
+  {
+   "id": "flag-commentary",
+   "group": "audio-subs",
+   "label": "COMMENTARY",
+   "accent": "#bd4dca",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])commentary(?![a-z0-9])"
+  },
+  {
+   "id": "flag-audio-description",
+   "group": "audio-subs",
+   "label": "AUDIO DESC",
+   "accent": "#2f70ec",
+   "enabled": true,
+   "pattern": "(?i)(?<![a-z0-9])(?:audio[\\s._-]*description|dvs)(?![a-z0-9])"
+  },
+  {
+   "id": "sub-en",
+   "group": "subtitles",
+   "label": "ENG SUBS",
+   "accent": "#ff637f",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?<![\\p{L}\\p{N}])(?:en[-_]?us|us[\\s._-]?english|american[\\s._-]?english|english[\\s._-]?\\(?us\\)?)(?![\\p{L}\\p{N}])|🇺🇸|(?<![\\p{L}\\p{N}])(?:en[-_]?gb|en[-_]?uk|british[\\s._-]?english|uk[\\s._-]?english|english[\\s._-]?\\(?uk\\)?|eng[-_]?uk)(?![\\p{L}\\p{N}])|🇬🇧)).*?(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:english|inglés|ingles|anglais|englisch|English)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:eng)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:english|inglés|ingles|anglais|englisch|English)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:eng)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z]))|(?<![a-z])esubs?(?![a-z]))"
+  },
+  {
+   "id": "sub-ml",
+   "group": "subtitles",
+   "label": "MAL SUBS",
+   "accent": "#edbf7b",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:malayalam|മലയാളം)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:mlm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:malayalam|മലയാളം)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:mlm)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:MAL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-ta",
+   "group": "subtitles",
+   "label": "TAMIL SUBS",
+   "accent": "#ffbc79",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:tamil|தமிழ்|தமிழ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TAM)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:tamil|தமிழ்|தமிழ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TAM)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-hi",
+   "group": "subtitles",
+   "label": "HINDI SUBS",
+   "accent": "#ffbc7a",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:hindi|हिंदी|हिन्दी|हिनदी)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:hin)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:hindi|हिंदी|हिन्दी|हिनदी)(?![\\p{L}\\p{N}])|(?<![\\p{L}\\p{N}])(?:hin)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-te",
+   "group": "subtitles",
+   "label": "TELUGU SUBS",
+   "accent": "#dcbe76",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:telugu|తెలుగు)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TEL)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:telugu|తెలుగు)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:TEL)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-kn",
+   "group": "subtitles",
+   "label": "KANNADA SUBS",
+   "accent": "#ffbe7e",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:kannada|ಕನ್ನಡ|ಕನನಡ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:KAN)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:kannada|ಕನ್ನಡ|ಕನನಡ)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:KAN)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-ja",
+   "group": "subtitles",
+   "label": "JAP SUBS",
+   "accent": "#ff3355",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:japanese|nihongo|日本語)(?![\\p{L}\\p{N}])|🇯🇵|(?<![\\p{L}\\p{N}])(?:jpn)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:JAP)(?![A-Za-z0-9]))|(?:(?<![\\p{L}\\p{N}])(?:japanese|nihongo|日本語)(?![\\p{L}\\p{N}])|🇯🇵|(?<![\\p{L}\\p{N}])(?:jpn)(?![\\p{L}\\p{N}])|(?<![A-Za-z0-9])(?-i:JAP)(?![A-Za-z0-9]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-ko",
+   "group": "subtitles",
+   "label": "KOR SUBS",
+   "accent": "#bf4a88",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:korean|hangugeo|hangul|한국어|한국어)(?![\\p{L}\\p{N}])|🇰🇷|(?<![\\p{L}\\p{N}])(?:kor)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:korean|hangugeo|hangul|한국어|한국어)(?![\\p{L}\\p{N}])|🇰🇷|(?<![\\p{L}\\p{N}])(?:kor)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-es",
+   "group": "subtitles",
+   "label": "SPA SUBS",
+   "accent": "#ff6b3b",
+   "enabled": true,
+   "pattern": "(?ius)^(?!.*(?:(?<![\\p{L}\\p{N}])(?:latino|latin[\\s._-]?spanish|latam|es[\\s._-]?(?:la|mx|419|ar|co|cl)|spanish[\\s._-]?latino)(?![\\p{L}\\p{N}])|🇲🇽|🇦🇷)).*?(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:spanish|español|espanol|castellano|castilian|es[\\s._-]*es|Español|Espanol)(?![\\p{L}\\p{N}])|🇪🇸|(?<![\\p{L}\\p{N}])(?:spa)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:spanish|español|espanol|castellano|castilian|es[\\s._-]*es|Español|Espanol)(?![\\p{L}\\p{N}])|🇪🇸|(?<![\\p{L}\\p{N}])(?:spa)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  },
+  {
+   "id": "sub-fr",
+   "group": "subtitles",
+   "label": "FRE SUBS",
+   "accent": "#af72a6",
+   "enabled": true,
+   "pattern": "(?ius)(?:(?:(?<![a-z])(?:subs?|subtitl(?:e|es|ed)|subbed|vostfr|vose)(?![a-z]))[^\\r\\n]{0,30}?(?:(?<![\\p{L}\\p{N}])(?:french|français|francais|truefrench|vf2|vostfr|français[\\s._-]*canadien|Français|francais[\\s._-]*canadien|Francais)(?![\\p{L}\\p{N}])|🇫🇷|(?<![\\p{L}\\p{N}])(?:fra|fre|vf|vff|vfi|vfq)(?![\\p{L}\\p{N}]))|(?:(?<![\\p{L}\\p{N}])(?:french|français|francais|truefrench|vf2|vostfr|français[\\s._-]*canadien|Français|francais[\\s._-]*canadien|Francais)(?![\\p{L}\\p{N}])|🇫🇷|(?<![\\p{L}\\p{N}])(?:fra|fre|vf|vff|vfi|vfq)(?![\\p{L}\\p{N}]))[\\s._-]{0,2}(?:subs?(?![a-z])|subtitl(?:e|es|ed)(?![a-z])|subbed(?![a-z])))"
+  }
+ ]
+}
