@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "tools"))
 from relayout import combo, relayout  # noqa: E402
 
-ART = ROOT / "sources" / "neon"       # original FR Neon artwork (MIT)
+ART = ROOT / "sources" / "neon-icon"      # original FR Neon artwork (MIT)
 
 # badges that don't exist in the original set, assembled from original pieces
 COMBOS = {
@@ -37,7 +37,7 @@ def render(badge_id):
         return combo(ART / f"{left}.png", ART / f"{right}.png")
     src = ART / f"{badge_id}.png"
     if not src.exists():
-        raise SystemExit(f"no artwork for {badge_id}: add sources/neon/{badge_id}.png or a COMBOS entry")
+        raise SystemExit(f"no artwork for {badge_id}: add sources/neon-icon/{badge_id}.png or a COMBOS entry")
     return relayout(src)
 
 
